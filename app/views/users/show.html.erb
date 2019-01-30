@@ -1,0 +1,41 @@
+<div class='row'>
+  <div class='col-xs-12'>
+   <div class="user-profile">
+    <div class="icon text-center">
+      <img src="<%= gravatar_url(@user, size: 100) %>" alt="" class="img-circle">
+      <a class='box'><%= render 'relationships/follow_button',user: @user%></a>
+    </div>
+    <% if current_user == @user %>
+      <div class='id'><%= link_to 'プロフィール編集', edit_user_path(current_user),class: 'btn btn-default' %></div>
+    <% end %>
+    <div class="name text-center">
+      
+      <p class='box'><%= @user.name%></p>
+      <p>投稿 <%= @count_post %>件　 フォロー <%= @count_followings %>人   フォロワー <%= @count_followers %>人</p>
+    </div>
+    
+  </div>
+  <%= render 'posts/posts', posts: @posts%>
+  </div>
+</div>
+
+<div class='login-modal'>
+  <div class='modal'>
+    <ul class="media">
+      <%@followings.each do |followings| %>
+          <li class="media-left">
+            <div class="media-object">
+              <img src="<%= gravatar_url(followings, size: 100) %>" alt="" class="img-circle">
+            </div>
+            <div class="media-body">
+              <div>
+                <%= followings.name %>
+              </div>
+              <div>  
+              </div>
+            </div>
+          </li>
+        <% end %>
+    </ul>
+  </div>
+</div>

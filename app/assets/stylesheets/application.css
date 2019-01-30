@@ -1,0 +1,602 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html,body {
+    height:90%;
+    width:100%;
+   margin:0px;
+  }
+
+
+header {
+  margin-bottom:0px;
+  }
+.navbar {
+  background-color:#222222;
+   position: fixed;
+  
+  top:0;
+  left:0;
+  margin:0;
+  right :0;
+  }
+
+.navbar-header {
+  font-size: 35px;
+  }
+  
+.navbar-header a {
+  color :#FFFFFF;
+  }
+  
+.navbar .nav {
+  margin-right:-125px;
+  
+  }
+  
+.cover {
+  width:100%;
+  height:100%;
+  background: url("/images/a34ee56515d2a95a621bbf36321703fa_s.jpg")center center no-repeat;
+  background-size: cover;
+  
+  
+  }
+.cover-inner {
+  height:100%;
+  background-color:rgba(0,0,0,0.3);
+  overflow: hidden;
+  }
+
+.cover .cover-inner .cover-contents {
+ text-align:center;
+ padding-top:70px;
+ font-family:serif;
+ 
+  }
+  
+  
+  .cover .cover-inner .cover-contents h1 {
+      margin-top:40px;
+      font-size:60px;
+      font-weight:bold;
+      color:white;
+    }  
+.cover  .id {
+  display:block;
+  background-color:#009933;
+  opacity:0.8;
+  color:white;
+  font-size:15px;
+  width:20%;
+  height:40px;
+  border-radius:10px;
+  position:absolute;
+  padding-top:7px;
+  top:60%;
+  left:29%;
+  font-weight:bold;
+  }
+  .cover  .login {
+  display:block;
+  background-color:#3366CC;
+  opacity:0.8;
+  color:white;
+  font-size:15px;
+  width:20%;
+  height:40px;
+  padding-top:7px;
+  border-radius:10px;
+  position:absolute;
+  top:60%;
+  right:29%;
+  font-weight:bold;
+  }
+  
+  
+footer {
+   width:100%;
+   padding-bottom:20px;
+   padding-top:20px;
+  margin-top:5%;
+ 
+  }
+   
+
+.panel {
+  margin-top:10px;
+  }
+  
+.panel panel-default .panel-heading {
+   
+  font-weight:bolder;
+  }
+  
+  
+
+.panel panel-default .panel-footer .btn{
+  margin-right:20px;
+  }  
+  
+  .item {
+  margin :0 auto;
+  width:70%;
+  }
+  
+
+
+
+
+.alert {
+   margin:80px 120px 0px 120px;
+   text-align:center;
+}
+
+.item {
+  width:80%;
+  }
+.item .panel-heading {
+  height:40px;
+  margin-bottom:-20px;
+  }
+
+.item .panel-body {
+  height:320px;
+  padding:0px;
+  margin:0px;
+  }
+  
+  .item .panel-body img {
+    width:100%;
+    height:300px;
+    }  
+
+.user-profile {
+  margin-top:30px;
+  margin-bottom:10px;
+  }
+
+ .user-profile .icon .box {
+   position:absolute;
+   top:145px;
+   left:765px;
+   padding-bottom:0px;
+   }
+  .user-profile .id {
+    position:absolute;
+      top:145px;
+      left:770px;
+    }
+  
+.user-profile .name {
+    margin-top:0px;
+    margin-bottom:35px;
+  }
+  
+.user-profile p {
+  margin-top:20px;
+  }
+
+.items .panel .panel-footer {
+  height:230px;
+  }
+  
+.post {
+  width:52%;
+  margin-left:310px;
+  
+  }
+  
+.post .panel-heading {
+  margin-bottom:-20px;
+
+  }
+
+
+.post .panel-heading .id {
+  position:absolute;
+  
+  top:25px;
+  right:250px;
+  
+  }
+
+.post .panel-body {
+  height:490px;
+  padding :0;  
+  }
+.post .panel-body img {
+  width:100%;
+  height:470px;
+  
+}
+
+.post .panel-footer{
+  width:100%;
+  height:70px;
+  background-color:white;
+  
+  }
+  
+
+  
+aside .comment{
+  margin-top:30px;
+  }
+  
+.items .panel{
+  margin-right:0;
+  }
+.items .panel .panel-heading {
+  margin-bottom:-20px;
+  }
+  
+.items .panel .panel-body {
+  height:395px;
+  padding:0;
+}
+.items .panel .panel-body  img{
+  width:100%;
+}
+
+.items .panel .panel-footer {
+  background-color:white;
+  }
+  
+
+
+ 
+  
+.button {
+  width: 85px;
+  height: 85px;
+  line-height: 85px;
+  position:fixed;
+  top:600px;
+  left:1300px;
+  background-color: #008DDD;
+  border-radius: 50%;
+  text-align:center;
+  }
+
+.button span {
+  color:#FFFFFF;
+  }
+  
+.like-btn {
+  color: #8899a6;
+  margin-right:-20px;
+  margin-bottom:10px;
+}
+
+
+.like-btn-unlike {
+  color: #ff2581;
+  margin-right:-20px;
+  margin-bottom:10px;
+}
+
+h2 {
+  margin-top:70px;
+  font-size:40px;
+  text-align:center;
+  }
+
+.media-list {
+  margin-top:10px;
+  }
+
+.media-body .comment {
+  position:absolute;
+   top:5px;
+   left:100px;
+  
+  }
+  
+  
+/*投稿一覧のレイアウト*/
+.all-post {
+  width:90%;
+  margin-left:100px;
+  }
+.all-post .panel-heading {
+  height:40px;
+  margin-bottom:-20px;
+  background-color:white;
+  }
+
+.all-post .panel-body {
+  height:380px;
+  padding:0px;
+  margin:0px;
+  }
+  
+  .all-post .panel-body img {
+    width:100%;
+    height:360px;
+    }  
+
+/*flashメッセージのレイアウト*/
+.alert { 
+    z-index:2;
+    position:absolute;
+    top:0px;
+    left:10%;
+    right:10%;
+   }
+   
+   
+   
+  /*コメント機能のレイアウト調整*/ 
+.comment-text {
+  width:280%;
+  height:30px;
+  border:none;
+  border-bottom:solid 1px;
+  background:none;
+  }
+
+.comment-submit {
+  border-radius:15px;
+  width:120px;
+  height:35px;
+  position:absolute;
+  top:-10%;
+  left:290%;
+  background-color:skyblue;
+  color:white;
+  font-weight:bold;  
+  }
+  
+  
+  /*ログイン画面の新規登録ボタンのレイアウト調整*/
+  
+.login .panel-body {
+  height:400px;
+  }  
+
+.login .panel-body p{
+  padding-top:20px;
+  font-weight:bold;
+  font-size:15px;
+  }
+.login .panel-body hr {
+  padding-bottom:20px;
+  }
+
+.new-button{
+ text-align:center;
+ margin-bottom:40px;
+ margin-top:30px;
+ 
+  }
+.new-btn {
+  color:white;
+  background-color:skyblue;
+ padding:18px;
+ padding-right:30px;
+ padding-left:30px;
+ border-radius:10px;
+ font-weight:bold;
+ font-size:15px;
+ 
+  }
+
+
+@media(max-width: 800px) {
+    
+
+    .cover .id {
+      position:absolute;
+      top:520px;
+      left:240px;
+    }
+   
+   .cover .cover-inner .cover-contents h1 {
+      margin-top:40px;
+      font-size:25px;
+      font-weight:bold;
+      color:white;
+    }
+    
+    .cover .cover-inner .cover-contents h2{
+      margin-top: 290px;
+      font-weight:bold;
+      margin-left:30px;
+      font-size:25px;
+      color:white;
+      }
+      footer {
+  
+       width:100%;
+       bottom:0;
+       padding-bottom:20px;
+       padding-top:10px;
+     }
+     
+     .button {
+          width: 85px;
+          height: 85px;
+          line-height: 85px;
+          position:fixed;
+          top:500px;
+          left:300px;
+          background-color: #008DDD;
+          border-radius: 50%;
+          text-align:center;
+          }
+     
+}
+
+@media(max-width: 500px) {
+    
+    html,body {
+        width:100%;
+        margin:0;
+        padding:0;
+      }
+      
+      .alert { 
+    z-index:2;
+    position:absolute;
+    top:0px;
+    left:-25%;
+    right:-25%;
+    }
+    
+    header {
+       margin-bottom:0px;
+      }  
+      
+    .cover .id {
+      position:absolute;
+      top:437px;
+      left:120px;
+    }
+   
+   .cover .cover-inner .cover-contents h1 {
+      margin-top:40px;
+      font-size:18px;
+      font-weight:bold;
+      color:white;}
+      
+    
+    
+    
+    .cover .cover-inner .cover-contents h2{
+      margin-top: 240px;
+      font-weight:bold;
+      margin-left:30px;
+      font-size:18px;
+      color:white;
+      }
+      
+      h2 {
+      margin-top:70px;
+      font-size:20px;
+      text-align:center;
+      }
+      
+      .button {
+          width: 85px;
+          height: 85px;
+          line-height: 85px;
+          position:fixed;
+          top:500px;
+          left:280px;
+          background-color: #008DDD;
+          border-radius: 50%;
+          text-align:center;
+          }
+          
+          
+          .post {
+            width:100%;
+            margin-left:-5% ;
+            }
+            
+          .post .panel {
+            width:113%;
+            }
+          
+        .post .panel-heading .id {
+            
+            position:absolute;
+            top:22px;
+            right:165px;
+            }
+                
+          .post .panel-body img {
+            width:100%;
+            height:310px;
+            }
+           
+           .post .panel-body {
+              height:330px;
+              padding-top :-20px;  
+              }
+            
+           
+           .item {
+             width:95%;
+             padding-left:20px;
+             
+            }
+          
+          .item .panel {
+            width:140%;
+            margin-bottom:20px;
+            }
+          .item .panel-heading {
+            height:30px;
+            }
+          
+          .item .panel-body {
+            height:100px;
+            padding:0px;
+            }
+          .item .panel-body img {
+            width:100%;
+            height:100%;
+            }
+            
+           .row {
+             width:100%;
+             }
+            .row .user-profile {
+              width:400px;
+              }
+              
+            .row .panel {
+              width:130%;
+              margin-right:5%;
+              }
+              
+          .user-profile .icon .box {
+           position:absolute;
+           top:145px;
+           left:250px;
+           padding-bottom:0px;
+           }
+           
+           .user-profile .id {
+          position:absolute; 
+          top:145px;  
+          left:250px;
+          }
+          
+          .all-post {
+            margin:20px;
+            margin-right:0px;
+            margin-left:0px;
+            
+            }
+          .all-post .panel {
+            width:120%;
+            margin-bottom:20px;
+            }
+          .all-post .panel-heading {
+            height:30px;
+            }
+          
+          .all-post .panel-body {
+            height:100px;
+            padding:0px;
+            }
+          .all-post .panel-body img {
+            width:100%;
+            height:100%;
+            }
+}

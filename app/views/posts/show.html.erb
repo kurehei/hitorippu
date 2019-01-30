@@ -1,0 +1,84 @@
+<div class="items">
+   <div class="col-md-offset-1 col-md-5 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <p class="itemt-title"><%= @post.name%></p>
+            </div>
+            <div class="panel-body">
+               <% if @post.image? %>
+              　<%= image_tag @post.image.thumb.url %>
+              　<% else %>
+              　<%= image_tag 'noimage.gif' %>
+            　<% end %>
+              
+            </div>
+            <div class="panel-footer">
+              <% if Like.find_by(user_id: current_user.id, post_id: @post.id) %>
+                    <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+                    <span class="fa fa-heart fa-2x  like-btn-unlike"></span>
+                <% end %>
+              <% else %>
+                  <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+                     <span class="fa fa-heart fa-2x like-btn"></span>
+                  <% end %>
+              <% end %>
+         　　<%=@likes_count %>
+         　
+             <p><%= @post.content%></p>
+            </div>
+          </div>
+         </div> 
+      </div>
+      
+    <aside class='col-md-6 col-xs-12'> 
+      <ul class="media-list">
+          <li class="media">
+              <div class="media-left">
+                  <img class="media-object img-rounded" src="<%= gravatar_url(current_user, { size: 50 }) %>" alt="">
+              </div>
+              <div class='media-body'>
+                 <div>
+                  <%= current_user.name%>
+                 </div>
+                 <div class='comment'>
+                          <%= form_for [@post, @comment] do |f| %>
+                          <%= f.text_field :content ,class: 'comment-text'%>
+                          <%= f.hidden_field :user_id, :value => current_user.id %>
+                          <%= f.hidden_field :post_id, :value => @post.id %>
+                          <%= button_tag(class: 'comment-submit')do %>
+                            <%= content_tag :span, "コメント",class:"fa fa-comments"%>
+                          <% end %>
+                    <% end %>
+                 </div>
+              </div>
+          </li>
+      </ul>
+        
+      <ul class="media-list">
+       <% @comments.each do |c| %> 
+        <li class='media'>
+              
+            <div class='media-left'>
+               <img class="media-object img-rounded" src="<%= gravatar_url(c.user, { size: 40 }) %>" alt="">
+                <!--コメント-->
+            </div>
+               <div class='media-body'>
+                 <div>
+                  <a href="/users/<%= @post.user.id %>"><%= c.user.name %></a>
+                 </div> 
+                 <div> 
+                  <%= c.content %>
+                 </div>
+                  <hr>
+               </div>
+        </li>
+        <% end %>
+      </ul>
+       
+     
+    </aside>
+  
+  
+
+</div>
+
