@@ -4,4 +4,9 @@ class Post < ApplicationRecord
   validates :content, presence: true, length: { maximum: 300 }
   validates :name, presence: true
   mount_uploader :image, ImageUploader
+  
+  def Post.search(search)
+    return Post.all unless search
+    Post.where(['name LIKE?', "%#{search}%"])
+  end
 end

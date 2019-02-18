@@ -1,0 +1,21 @@
+<div class='ranking'>
+  <h1 class="fa fa-thumbs-o-up text-center">いいねランキング</h1>
+   <table class='table'>
+     <thead>
+        <tr>
+           <th class='text-center'>順位</th>
+           <th class='text-center'>タイトル</th>
+           <th class='text-center'>ユーザー</th>
+        </tr>
+     </thead>
+     <% rank.each.with_index(1) do |rank, i| %>
+     <tbody>
+       <tr>
+         <th class='text-center'><%= "第#{i}位" %></th>
+         <th class='text-center'><%= link_to rank.name%></th>
+         <th class='text-center'><%= link_to rank.user.name%></th>
+       </tr>
+     </tbody>
+     <% end %>
+   </table>
+</div>

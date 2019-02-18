@@ -13,16 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
+ 
+ 
 html,body {
     height:90%;
     width:100%;
    margin:0px;
+   padding:0px;
+   background-color:#f2f2f2;
   }
 
 
 header {
   margin-bottom:0px;
   }
+
+.panel-heading {
+ background-color:white; 
+}
 .navbar {
   background-color:#222222;
    position: fixed;
@@ -43,13 +53,19 @@ header {
   
 .navbar .nav {
   margin-right:-125px;
-  
   }
   
+.navbar li p{
+  margin-bottom:-16px;
+  }
+  
+/*トップページのレイアウト*/
+
+
 .cover {
   width:100%;
   height:100%;
-  background: url("/images/a34ee56515d2a95a621bbf36321703fa_s.jpg")center center no-repeat;
+   background: url("/images/covers-bg.jpg")center center no-repeat;
   background-size: cover;
   
   
@@ -66,8 +82,7 @@ header {
  font-family:serif;
  
   }
-  
-  
+
   .cover .cover-inner .cover-contents h1 {
       margin-top:40px;
       font-size:60px;
@@ -104,16 +119,69 @@ header {
   right:29%;
   font-weight:bold;
   }
+
+/*layouts/toppage2のレイアウト*/
   
-  
-footer {
-   width:100%;
-   padding-bottom:20px;
-   padding-top:20px;
-  margin-top:5%;
- 
+  .toppage2 {
+    margin-top:-130px;
+    width:100%;
+   padding:0;
+    height:460px;
+    background-color:#f2f2f2;
+    }
+    
+.toppage2 h2 {
+  padding-top:50px;
+  margin-bottom:40px;
   }
-   
+  
+.heart-tag{
+ position:absolute;
+   top:270px;
+   left:350px;
+   right:0px;
+}
+
+.comment-tag {
+   position:absolute;
+   top:270px;
+   left:680px;
+   right:0px;
+}
+
+.image-tag {
+   position:absolute;
+   top:270px;
+   left:1050px;
+   right:0px;
+  }
+  
+.comment-capital {
+  position:absolute;
+    top:350px;
+    left:640px;
+  font-weight:bold;
+}
+
+.heart-capital{
+  position:absolute;
+    top:350px;
+    left:320px;
+  font-weight:bold;
+  }
+
+.image-capital {
+  position:absolute;
+    top:350px;
+    left:990px;
+  font-weight:bold;
+  }
+/*フッターのレイアウト*/
+#caption {
+   padding-top:30px;
+    background-color:white;
+    padding-bottom:30px ;
+  }
 
 .panel {
   margin-top:10px;
@@ -144,12 +212,14 @@ footer {
    text-align:center;
 }
 
+/*user/showレイアウト*/
 .item {
   width:80%;
   }
 .item .panel-heading {
   height:40px;
   margin-bottom:-20px;
+  background-color:white;
   }
 
 .item .panel-body {
@@ -193,21 +263,22 @@ footer {
   height:230px;
   }
   
+/*タイムラインのレイアウト*/
+
 .post {
-  width:52%;
-  margin-left:310px;
+  width:60%;
+  margin-left:280px;
   
   }
   
 .post .panel-heading {
   margin-bottom:-20px;
-
+  background-color:white;
   }
 
 
 .post .panel-heading .id {
-  position:absolute;
-  
+  position:absolute; 
   top:25px;
   right:250px;
   
@@ -217,6 +288,7 @@ footer {
   height:490px;
   padding :0;  
   }
+  
 .post .panel-body img {
   width:100%;
   height:470px;
@@ -229,20 +301,50 @@ footer {
   background-color:white;
   
   }
-  
+  .button {
+  width: 85px;
+  height: 85px;
+  line-height: 85px;
+  position:fixed;
+  top:600px;
+  left:1300px;
+  background-color: #008DDD;
+  border-radius: 50%;
+  text-align:center;
+  transition: 1s;
+  -webkit-transition: 1s;
+  }
+.button:hover {
+  transform:scale(1.5);
+  }
 
+.button span {
+  color:#FFFFFF;
+  }
+/*post/show*/
+
+.comments {
+  background-color:white;
+  margin-top:10px;
+  width:680px;
+  }
   
 aside .comment{
-  margin-top:30px;
+  margin-top:20px;
   }
   
 .items .panel{
   margin-right:0;
   }
-.items .panel .panel-heading {
+.items .panel-heading {
   margin-bottom:-20px;
   }
-  
+
+.items .panel-heading .fa {
+   position:absolute;
+   top:20px; 
+   left:550px;
+}
 .items .panel .panel-body {
   height:395px;
   padding:0;
@@ -259,21 +361,7 @@ aside .comment{
 
  
   
-.button {
-  width: 85px;
-  height: 85px;
-  line-height: 85px;
-  position:fixed;
-  top:600px;
-  left:1300px;
-  background-color: #008DDD;
-  border-radius: 50%;
-  text-align:center;
-  }
 
-.button span {
-  color:#FFFFFF;
-  }
   
 .like-btn {
   color: #8899a6;
@@ -305,11 +393,72 @@ h2 {
   
   }
   
+/*ユーザー検索フォーム*/
+ 
+ .user-index {
+   height:100%;
+   }
+  .search {
+  text-align:center;
+  list-style:none;
+  
+  }
+.search-form {
+  height:41px;
+  width:300px;
+  margin-right:-2px;
+  margin-top:1px;
+  border:1px solid black;
+  } 
+.search .btn {
+  height:40px;
+  width:60px;
+  }
+
+.search-user {
+  width:100%;
+  }
+
+.user-box {
+  border:ridge 1px black;
+  height:210px;
+  width:14%;
+  float:left;
+  margin-right:10px;
+  margin-top:70px;
+  margin-left:120px;
+  padding:15px;
+  }
+.user-box img {
+ margin-left:30px;
+  }
+.user-box a{
+  position:relative;
+  top:0px;
+  left:60px;
+  font-size:15px;
+  }
+  .user-box p{
+  position:relative;
+  top:5px;
+  left:50px;
+  font-size:15px;
+  }
+
   
 /*投稿一覧のレイアウト*/
+.post-index {
+  height:100%;
+  }
+
+.all-post .item-titles {
+  position:absolute;
+    top:20px;
+  }
 .all-post {
   width:90%;
-  margin-left:100px;
+  margin-left:80px;
+  margin-top:50px;
   }
 .all-post .panel-heading {
   height:40px;
@@ -363,25 +512,66 @@ h2 {
   
   /*ログイン画面の新規登録ボタンのレイアウト調整*/
   
+.login {
+  height:90%;
+  }
+.login .panel-heading {
+  background-color:white;
+  }
 .login .panel-body {
-  height:400px;
+  height:500px;
   }  
 
 .login .panel-body p{
-  padding-top:17px;
+  padding-top:30px;
   font-weight:bold;
   font-size:15px;
   }
 .login .panel-body hr {
-  padding-bottom:20px;
+  padding-bottom:45px;
   }
 
 .new-button{
  text-align:center;
- margin-bottom:40px;
- margin-top:30px;
- 
+ margin-bottom:30px;
+ margin-top:0px;
   }
+  
+.new-btn {
+   width:180px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  }
+.login-btn {
+  position:relative;
+    top:40px;
+  height:50px;
+  width:180px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 7px;
+    
+  }
+  .login-btn:active {
+     
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
+  /*コメントのレイアウト調整*/
+  
+aside .media1 {
+  margin-bottom:20px;
+  }  
 .new-btn {
   color:white;
   background-color:skyblue;
@@ -393,6 +583,44 @@ h2 {
  font-size:15px;
  
   }
+
+/*投稿ページのレイアウト*/
+
+.post-new {
+ height:100%;
+ font-size:18px;
+  }
+  
+.post-new .panel{
+  height:600px;
+  }
+.post-new .panel-body .form-group{
+  margin-top:40px;
+  }
+
+.post-new .panel-body .form-group3{
+  margin-bottom: 50px;
+  margin-top:40px;
+  }
+
+/*ランキング機能のポジション*/ 
+.ranking {
+  width:350px;
+  position:fixed;
+    top:90px;
+    left:970px;
+    background-color:white;
+  padding:30px;
+  }
+
+.ranking h1 {
+  font-size:20px;
+  }
+.count_7{
+  counter-reset: chapter;
+}
+
+
 
 
 @media(max-width: 800px) {
@@ -440,6 +668,7 @@ h2 {
      
 }
 
+/*レスポンシブデザイン*/ 
 @media(max-width: 500px) {
     
     html,body {
@@ -501,102 +730,104 @@ h2 {
           text-align:center;
           }
           
+    
+    .post {
+      width:100%;
+      margin-left:-5% ;
+      }
+      
+    .post .panel {
+      width:113%;
+      }
+    
+  .post .panel-heading .id {
+      
+      position:absolute;
+      top:22px;
+      right:165px;
+      }
           
-          .post {
-            width:100%;
-            margin-left:-5% ;
-            }
-            
-          .post .panel {
-            width:113%;
-            }
-          
-        .post .panel-heading .id {
-            
-            position:absolute;
-            top:22px;
-            right:165px;
-            }
-                
-          .post .panel-body img {
-            width:100%;
-            height:310px;
-            }
-           
-           .post .panel-body {
-              height:330px;
-              padding-top :-20px;  
-              }
-            
-           
+    .post .panel-body img {
+      width:100%;
+      height:310px;
+      }
+     
+     .post .panel-body {
+        height:330px;
+        padding-top :-20px;  
+        }
+      
+     
            .item {
-             width:95%;
-             padding-left:20px;
-             
-            }
-          
-          .item .panel {
-            width:140%;
-            margin-bottom:20px;
-            }
-          .item .panel-heading {
-            height:30px;
-            }
-          
-          .item .panel-body {
-            height:100px;
-            padding:0px;
-            }
-          .item .panel-body img {
-            width:100%;
-            height:100%;
-            }
-            
-           .row {
-             width:100%;
-             }
-            .row .user-profile {
-              width:400px;
-              }
-              
-            .row .panel {
-              width:130%;
-              margin-right:5%;
-              }
-              
-          .user-profile .icon .box {
-           position:absolute;
-           top:145px;
-           left:250px;
-           padding-bottom:0px;
-           }
-           
-           .user-profile .id {
-          position:absolute; 
-          top:145px;  
-          left:250px;
-          }
-          
-          .all-post {
-            margin:20px;
-            margin-right:0px;
-            margin-left:0px;
-            
-            }
-          .all-post .panel {
-            width:120%;
-            margin-bottom:20px;
-            }
-          .all-post .panel-heading {
-            height:30px;
-            }
-          
-          .all-post .panel-body {
-            height:100px;
-            padding:0px;
-            }
-          .all-post .panel-body img {
-            width:100%;
-            height:100%;
-            }
+     width:95%;
+     padding-left:20px;
+     
+    }
+  
+  .item .panel {
+    width:140%;
+    margin-bottom:20px;
+    }
+  .item .panel-heading {
+    height:30px;
+    }
+  
+  .item .panel-body {
+    height:100px;
+    padding:0px;
+    }
+  .item .panel-body img {
+    width:100%;
+    height:100%;
+    }
+    
+   .row {
+     width:100%;
+     }
+     
+     
+    .row .user-profile {
+      width:400px;
+      }
+      
+    .row .panel {
+      width:130%;
+      margin-right:5%;
+      }
+      
+  .user-profile .icon .box {
+   position:absolute;
+   top:145px;
+   left:250px;
+   padding-bottom:0px;
+   }
+   
+   .user-profile .id {
+  position:absolute; 
+  top:145px;  
+  left:250px;
+  }
+  
+  .all-post {
+    margin:20px;
+    margin-right:0px;
+    margin-left:0px;
+    
+    }
+  .all-post .panel {
+    width:120%;
+    margin-bottom:20px;
+    }
+  .all-post .panel-heading {
+    height:30px;
+    }
+  
+  .all-post .panel-body {
+    height:100px;
+    padding:0px;
+    }
+  .all-post .panel-body img {
+    width:100%;
+    height:100%;
+    }
 }

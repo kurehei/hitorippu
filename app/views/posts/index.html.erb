@@ -1,18 +1,31 @@
-<% @posts.each do |posted| %>
-      <div class="all-post">
-        <div class="col-md-4 col-sm-4 col-xs-4">
-          <div class="panel panel-default">
-            <div class="panel-heading text-center">
-              <p class="item-title"><%= link_to posted.name,posted %></p>
-            </div>
-            <div class="panel-body">
-              <% if posted.image? %>
-              　<%= image_tag posted.image.thumb.url %>
-              　<% else %>
-              　<%= image_tag 'noimage.gif' %>
-            　<% end %>
+<div class='post-index'>
+  <div class='search'>
+      <%= form_tag(posts_path, :method => 'get')do%>
+        <%= text_field_tag :search, '', class: 'search-form',placeholder: "気になるタイトルを検索してみよう！"%>
+        <%= button_tag(class:  "btn btn-sm btn-primary")do%>
+          <%= content_tag :span , '検索', class: 'fa fa-search'%>
+        <% end %>
+      <% end %>
+    </div>
+    
+  
+  <% @posts.each do |posted| %>
+        <div class="all-post">
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center">
+                <p class="item-title"><%= link_to posted.name,posted %></p>
+                <p class='item-titles'><img src="<%= gravatar_url(posted.user, size: 20) %>" alt="" class="img-circle"><%=link_to posted.user.name, user_path(posted.user)%></p>
+              </div>
+              <div class="panel-body">
+                <% if posted.image? %>
+                　<%= image_tag posted.image.thumb.url %>
+                　<% else %>
+                　<%= image_tag 'noimage.gif' %>
+              　<% end %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+</div>

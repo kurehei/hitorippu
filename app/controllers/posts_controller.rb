@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
    before_action :require_user_logged_in
-  before_action :correct_user, only: [:destroy]
+  before_action :correct_user, only: [:destroy,:rank]
   
   def index
-    @posts= Post.all.order('created_at ASC')
+    @posts=Post.search(params[:search])
   end
   
   def new
@@ -15,9 +15,8 @@ class PostsController < ApplicationController
   @likes_count = Like.where(post_id: @post.id).count
   @comments = @post.comments
   @comment =Comment.new
-  
-  
  end
+ 
  def create
     @post=current_user.posts.build(post_params)
     
@@ -28,7 +27,7 @@ class PostsController < ApplicationController
       flash.now[:danger] = '記録できませんでした'
       render :new
     end
-   end
+  end
    
    def destroy
      @post.destroy
@@ -36,6 +35,7 @@ class PostsController < ApplicationController
      redirect_back(fallback_location: root_path)
    end
    
+  
    
    private
   

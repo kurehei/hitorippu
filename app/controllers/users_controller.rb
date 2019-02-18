@@ -2,7 +2,7 @@ class UsersController < ApplicationController
  before_action :require_user_logged_in, only: [:index, :show]
  
   def index
-    @users=User.all.page(params[:page])
+    @users=User.search(params[:search])
   end
   
   def show
@@ -10,6 +10,8 @@ class UsersController < ApplicationController
      @posts=@user.posts.order('created_at DESC')
      counts(@user)
       @followings = @user.followings.page(params[:page])
+      @followers =@user.followers.page(params[:page])
+      
   end
  
   def new
@@ -65,6 +67,6 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduction)
   end
 end

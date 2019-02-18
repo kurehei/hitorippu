@@ -1,0 +1,17 @@
+<ul class="media-list">
+    <% followings.each do |following| %>
+      <li class="media">
+        <div class="media-left">
+          <img class="media-object img-rounded" src="<%= gravatar_url(following, { size: 50 }) %>" alt="">
+        </div>
+        <div class="media-body">
+          <div>
+            <%= following.name %>
+          </div>
+          <div>
+          </div>
+          <%= render 'relationships/follow_button',user: following%>
+        </div>
+      </li>
+    <% end %>
+  </ul>

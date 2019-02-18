@@ -14,13 +14,13 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to '全ての投稿', posts_path %></li>
             
-            <li><%= link_to users_path do%>ユーザー<span class='fa fa-users'></span><% end %></li>
+            <li><%= link_to '', posts_path ,class: 'fa fa-search fa-2x'%></li>
+            <li><a href='#' class="fa fa-map-o fa-2x"></a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <span class='gravatar'>
-                  <img src="<%= gravatar_url(current_user, size: 20) %>" alt="" class="img-circle">
+                  <img src="<%= gravatar_url(current_user, size: 22) %>" alt="" class="img-circle">
                 </span>
               <%= current_user.name %> 
                 <span class="caret"></span></a>
@@ -28,7 +28,10 @@
               <ul class="dropdown-menu">
                 <li><%= link_to 'マイプロフィール', user_path(current_user) %></li>
                   <li role="separator" class="divider"></li>
+                <li><%= link_to '投稿する', new_post_path%></li>
+                 <li role="separator" class="divider"></li>
                 <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+               
               </ul>
             </li>
         </ul>

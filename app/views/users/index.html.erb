@@ -1,1 +1,20 @@
-<%= render 'users', users: @users %>
+<div class='user-index'>
+  <div class='search'>
+    <%= form_tag(users_path, :method => 'get')do%>
+      <%= text_field_tag :search, '', class: 'search-form'%>
+      <%= button_tag(class:  "btn btn-sm btn-primary")do%>
+        <%= content_tag :span , '検索', class: 'fa fa-search',placeholder: "くれ"%>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <div class='search-user'>
+    <% @users.each do |users| %>
+    <div class='user-box'>
+      <img class="media-object img-circle" src="<%= gravatar_url(users, { size: 105 }) %>" alt="">
+      <a href="/users/<%= users.id %>"><%= users.name %></a>
+      <p><%=users.introduction%></p>
+    </div>
+    <% end %>
+  </div>
+</div>

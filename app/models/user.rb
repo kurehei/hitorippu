@@ -6,6 +6,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   validates :password , presence: true, length: { in: 6..15 } 
   has_secure_password
+  validates :introduction, presence: true, length: { maximum: 150}
   has_many :posts
   has_many :comments
   has_many :relationships
@@ -30,5 +31,10 @@ class User < ApplicationRecord
   
   def feed_posts
     Post.where(user_id: self.following_ids + [self.id])
+  end
+  
+  def self.search(search)
+    return User.all unless search
+    User.where(['name LIKE?', "%#{search}%"])
   end
 end

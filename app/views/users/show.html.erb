@@ -11,7 +11,8 @@
     <div class="name text-center">
       
       <p class='box'><%= @user.name%></p>
-      <p>投稿 <%= @count_post %>件　 フォロー <%= @count_followings %>人   フォロワー <%= @count_followers %>人</p>
+      <p><%= @user.introduction%></p>
+      <p>投稿 <%= @count_post %>件　 <span data-toggle="modal" data-target="#sampleModal">フォロー  </span><%= @count_followings %>人    <span data-toggle="modal" data-target="#sampleModal2">フォロワー</span> <%= @count_followers %>人</p>
     </div>
     
   </div>
@@ -19,23 +20,39 @@
   </div>
 </div>
 
-<div class='login-modal'>
-  <div class='modal'>
-    <ul class="media">
-      <%@followings.each do |followings| %>
-          <li class="media-left">
-            <div class="media-object">
-              <img src="<%= gravatar_url(followings, size: 100) %>" alt="" class="img-circle">
-            </div>
-            <div class="media-body">
-              <div>
-                <%= followings.name %>
-              </div>
-              <div>  
-              </div>
-            </div>
-          </li>
-        <% end %>
-    </ul>
-  </div>
+
+<!-- モーダル・ダイアログ(フォロー) -->
+<div class="modal fade" id="sampleModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content col-md-8 col-md-offset-2">
+			<div class="modal-header">
+				 <button type='button' class='close' data-dismiss="modal" aria-label='Close'>
+            <span aria-hidden="true">×</span>
+         </button>
+				<h4 class="modal-title text-center">フォロー</h4>
+			</div>
+			<div class="modal-body">
+				<%= render 'followings', followings: @followings%>
+			</div>
+		</div>
+	</div>
 </div>
+    
+<!-- モーダル・ダイアログ(フォロワー) -->
+<div class="modal fade" id="sampleModal2" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content col-md-8 col-md-offset-2">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title text-center">フォロワー</h4>
+			</div>
+			<div class="modal-body">
+				<%= render 'followers', followers: @followers%>
+			</div>
+		</div>
+	</div>
+</div>
+              <
+            
+               
+             
