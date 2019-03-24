@@ -90,7 +90,6 @@ header {
       color:white;
     }  
 .cover  .id {
-  display:block;
   background-color:#009933;
   opacity:0.8;
   color:white;
@@ -103,9 +102,18 @@ header {
   top:60%;
   left:29%;
   font-weight:bold;
+  display: inline-block;
+  border-bottom: solid 4px #627295;
   }
-  .cover  .login {
-  display:block;
+  
+  .cover .id:active {
+     
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/}
+      
+    
+  .cover .login {
   background-color:#3366CC;
   opacity:0.8;
   color:white;
@@ -118,15 +126,24 @@ header {
   top:60%;
   right:29%;
   font-weight:bold;
+  display: inline-block;
+  border-bottom: solid 4px #627295;
   }
 
+ .cover .login:active {
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+      }
+
+      
 /*layouts/toppage2のレイアウト*/
   
   .toppage2 {
     margin-top:-130px;
     width:100%;
    padding:0;
-    height:460px;
+    height:650px;
     background-color:#f2f2f2;
     }
     
@@ -134,48 +151,66 @@ header {
   padding-top:50px;
   margin-bottom:40px;
   }
+.toppage2 .text1{
+  text-align: center;
+  font-weight: bold; 
+  font-size: 20px;
+  margin-top: 10px;
+}
   
 .heart-tag{
  position:absolute;
-   top:270px;
-   left:350px;
+   top:300px;
+   left:380px;
    right:0px;
 }
 
 .comment-tag {
    position:absolute;
-   top:270px;
-   left:680px;
+   top:300px;
+   left:980px;
    right:0px;
 }
 
 .image-tag {
    position:absolute;
-   top:270px;
-   left:1050px;
+   top:460px;
+   left:380px;
    right:0px;
   }
   
+.chat-tag {
+   position:absolute;
+   top:460px;
+   left:980px;
+   right:0px;
+}
 .comment-capital {
   position:absolute;
-    top:350px;
-    left:640px;
+    top:370px;
+    left:930px;
   font-weight:bold;
 }
 
 .heart-capital{
   position:absolute;
-    top:350px;
-    left:320px;
+    top:370px;
+    left:350px;
   font-weight:bold;
   }
 
 .image-capital {
   position:absolute;
-    top:350px;
-    left:990px;
+    top:530px;
+    left:350px;
   font-weight:bold;
   }
+.chat-capital {
+  position:absolute;
+    top:530px;
+    left:930px;
+  font-weight:bold;
+}
 /*フッターのレイアウト*/
 #caption {
    padding-top:30px;
@@ -280,7 +315,7 @@ header {
 .post .panel-heading .id {
   position:absolute; 
   top:25px;
-  right:250px;
+  right:290px;
   
   }
 
@@ -399,20 +434,23 @@ h2 {
    height:100%;
    }
   .search {
-  text-align:center;
   list-style:none;
+  margin-right: 400px;
   
   }
 .search-form {
-  height:41px;
-  width:300px;
-  margin-right:-2px;
-  margin-top:1px;
-  border:1px solid black;
+  height:35px;
+  width:260px;
+  margin-right: 3px;
+  margin-top:10px;
   } 
 .search .btn {
-  height:40px;
+  background-color: #66CC99;
+  height:36px;
   width:60px;
+  margin-bottom: 2px;
+  color: white;
+  padding-right: 4px;
   }
 
 .search-user {
@@ -547,6 +585,12 @@ h2 {
   border-bottom: solid 4px #627295;
   border-radius: 3px;
   }
+  
+  .new-btn:active {
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
 .login-btn {
   position:relative;
     top:40px;
@@ -564,6 +608,27 @@ h2 {
   .login-btn:active {
      
      -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
+/*新規登録機能のレイアウト*/
+
+  .user-new .panel-heading{
+    background-color: white;
+    }
+  
+  .user-new .btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: blue;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 7px;
+    }
+  
+  .user-new .btn:acrive {
+    -webkit-transform: translateY(4px);
       transform: translateY(4px);/*下に動く*/
       border-bottom: none;/*線を消す*/
     }
@@ -591,6 +656,10 @@ aside .media1 {
  font-size:18px;
   }
   
+ .post-new .panel-heading {
+   background-color: white;
+   }
+   
 .post-new .panel{
   height:600px;
   }
@@ -603,6 +672,21 @@ aside .media1 {
   margin-top:40px;
   }
 
+.post-new .btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 7px;
+  }
+
+  .post-new .btn:acrive {
+    -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;
+  }
 /*ランキング機能のポジション*/ 
 .ranking {
   width:350px;
@@ -614,59 +698,53 @@ aside .media1 {
   }
 
 .ranking h1 {
-  font-size:20px;
+  font-size:25px;
+  padding-left: 50px;
+  padding-bottom: 20px;
   }
 .count_7{
   counter-reset: chapter;
 }
 
+/*スライドデザイン*/
 
-
-
-@media(max-width: 800px) {
-    
-
-    .cover .id {
-      position:absolute;
-      top:520px;
-      left:240px;
-    }
-   
-   .cover .cover-inner .cover-contents h1 {
-      margin-top:40px;
-      font-size:25px;
-      font-weight:bold;
-      color:white;
-    }
-    
-    .cover .cover-inner .cover-contents h2{
-      margin-top: 290px;
-      font-weight:bold;
-      margin-left:30px;
-      font-size:25px;
-      color:white;
-      }
-      footer {
+.toppage3 {
+   background-color: white;
+  }
+.toppage3 h1 {
+  padding-top: 100px;
+  text-align: center;
+  }  
+.toppage3-sign {
+  position: relative;
+    top:-130px;
+    left:600px;
+    background-color: #008DDD;
+    opacity:0.7;
+    color: white;
+    padding: 15px 60px 15px 60px;
+    border-radius: 20px;
+  }
   
-       width:100%;
-       bottom:0;
-       padding-bottom:20px;
-       padding-top:10px;
-     }
-     
-     .button {
-          width: 85px;
-          height: 85px;
-          line-height: 85px;
-          position:fixed;
-          top:500px;
-          left:300px;
-          background-color: #008DDD;
-          border-radius: 50%;
-          text-align:center;
-          }
-     
+.carousel-inner  {
+  width: 100%;
+  height: 600px;
+  margin-top: 60px;
+  background-color: white;
+   padding-right: 120px;
+   padding-left: 120px;
+  }
+
+.carousel-caption  p{
+z-index: 20;
 }
+.carousel-inner img {
+   width: 100%;
+   height: 800px;
+    
+  }
+
+
 
 /*レスポンシブデザイン*/ 
 @media(max-width: 500px) {
@@ -719,11 +797,11 @@ aside .media1 {
       }
       
       .button {
-          width: 85px;
+          width: 265px;
           height: 85px;
           line-height: 85px;
           position:fixed;
-          top:500px;
+          top:700px;
           left:280px;
           background-color: #008DDD;
           border-radius: 50%;
@@ -756,17 +834,116 @@ aside .media1 {
         height:330px;
         padding-top :-20px;  
         }
-      
+/*検索フォーム*/
+  .search {
+  list-style:none;
+  
+  }
+.search-form {
+  height:35px;
+  width:260px;
+  margin-right: 3px;
+  margin-top:10px;
+  margin-left: 10px;
+  } 
+.search .btn {
+   position: absolute;
+   top: 9px;
+    right: 190px;
+  background-color: #66CC99;
+  height:36px;
+  width:60px;
+  margin-bottom: 2px;
+  color: white;
+  padding-right: 4px;
+  }
+
+.search-user {
+  width:100%;
+  }
+
+.user-box {
+  border:ridge 1px black;
+  height:210px;
+  width:14%;
+  float:left;
+  margin-right:10px;
+  margin-top:70px;
+  margin-left:120px;
+  padding:15px;
+  }
+.user-box img {
+ margin-left:30px;
+  }
+.user-box a{
+  position:relative;
+  top:0px;
+  left:60px;
+  font-size:15px;
+  }
+  .user-box p{
+  position:relative;
+  top:5px;
+  left:50px;
+  font-size:15px;
+  }
+/*post/showのレイアウト*/
+.items {
+  padding-top: -5px;
+  width: 100%;
+}
+
+.items .panel-heading .fa{
+  position: absolute;
+    top: 23px;
+    left: 365px;
+  }
+/*コメント機能*/
+  
+  .comments {
+  background-color:white;
+  margin-top:10px;
+  width: 100%;
+  }
+  
+aside .comment{
+  margin-top:20px;
+  }
      
-           .item {
-     width:95%;
+ .comment-text {
+  
+  width:190px;
+  height:30px;
+  border:none;
+  border-bottom:solid 1px;
+  background:none;
+  }
+
+.comment-submit {
+  border-radius:15px;
+  width:90px;
+  height:25px;
+  position:absolute;
+  top:10%;
+  left:200px;
+  background-color:skyblue;
+  color:white;
+  font-weight:bold;  
+  }
+  
+/*user/showのレイアウト*/
+     
+    .item {
+    border: 2px solid blue;
+     width:100%;
      padding-left:20px;
      
     }
   
   .item .panel {
-    width:140%;
+    width:100%;
     margin-bottom:20px;
+    border: 2px solid yellow;
     }
   .item .panel-heading {
     height:30px;
@@ -783,17 +960,8 @@ aside .media1 {
     
    .row {
      width:100%;
+     border: 2px solid red;
      }
-     
-     
-    .row .user-profile {
-      width:400px;
-      }
-      
-    .row .panel {
-      width:130%;
-      margin-right:5%;
-      }
       
   .user-profile .icon .box {
    position:absolute;
@@ -807,16 +975,39 @@ aside .media1 {
   top:145px;  
   left:250px;
   }
-  
+/*post/index*/
+  .post-index {
+    border: 2px solid red;
+    width: 100%;
+    }
   .all-post {
-    margin:20px;
-    margin-right:0px;
-    margin-left:0px;
-    
+    border: 2px solid green; 
+    width: 33.2%;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin: 5% 0% 10% 0%;
+    float: left;
     }
   .all-post .panel {
-    width:120%;
-    margin-bottom:20px;
+    border: 2px solid blue; 
+    width: 123%;
+    margin-right: -10%;
+    margin-left: -10%;
+    }
+  .all-post .item-title {
+    font-size: 5px;
+    border: 1px solid red;
+    position: relative;
+      top:0px;
+      left: 15px;
+    }
+    
+  .all-post .item-titles {
+    font-size: 5px;
+    border: 1px solid orange;
+    position: relative;
+      top:-30px;
+      left: -32px;
     }
   .all-post .panel-heading {
     height:30px;
@@ -830,4 +1021,21 @@ aside .media1 {
     width:100%;
     height:100%;
     }
+/*投稿ボタン*/
+  .button {
+  width: 85px;
+  height: 85px;
+  line-height: 85px;
+  position:fixed;
+  top:500px;
+  left:300px;
+  background-color: #008DDD;
+  border-radius: 50%;
+  text-align:center;
+  transition: 1s;
+  -webkit-transition: 1s;
+  }
+.button:hover {
+  transform:scale(1.5);
+  }
 }

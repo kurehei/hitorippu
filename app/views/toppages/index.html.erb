@@ -4,7 +4,7 @@
         <%= render 'posts/timeline', posts: @posts%>
           <div class='ranking'><%= render 'posts/ranks', rank: @rank%>
           </div>
-           <div class='button'>
+           <div class="button" id='post-button'>
               <%= link_to new_post_path do%>
                   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                       <span class='color'>投稿する</span>
@@ -28,6 +28,7 @@
           <% end %>
         </div>
       <%=render 'layouts/toppage2' %>
+      <%= render 'layouts/toppage3'%>
       <%= render 'layouts/footer'%>
     <% end %>
   </div>

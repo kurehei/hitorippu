@@ -17,4 +17,5 @@
 
  $(function() {
   $('#flash').fadeOut(2500);
+  $('#post-button').fadeIn(3000)
 });

@@ -1,6 +1,6 @@
 <div class='timeline'>
   <% if posts.empty?%>
-    <h2>まずは気軽に投稿してみよう！！</h2>
+    <h2>まずは気軽に投稿してみよう！</h2>
   <% else %>
     <% posts.each do |postings| %>
         <div class="post">
@@ -12,13 +12,10 @@
                 
               </div>
               <div class="panel-body">
-                  <% if postings.image? %>
                       <%=link_to postings do%>
                       　<%= image_tag postings.image.thumb.url ,:size =>'570x335'%>
                       <% end%>
-                  　<% else %>
-                  　<%= image_tag '' %>
-                  <% end %>
+  
                 
               </div>
             </div>
