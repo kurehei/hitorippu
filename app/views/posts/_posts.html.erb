@@ -1,7 +1,6 @@
 <div class='row3'>
   <% posts.each do |posting| %>
-      <div class="item">
-        <div class="col-md-4 col-sm-4 col-xs-4">
+      <div class="iteming">
           <div class="panel panel-default">
             <div class="panel-heading text-center">
               <p class="item-title"><%= link_to posting.name,posting %></p>
@@ -14,7 +13,7 @@
             　<% end %>
             </div>
           </div>
-        </div>
+      
       </div>
     <% end %>
 </div>

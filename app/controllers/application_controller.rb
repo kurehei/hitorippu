@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
     @count_followings = user.followings.count
     @count_followers = user.followers.count
   end
+  
+  def user_index
+    @user_index=User.all
+  end
 end

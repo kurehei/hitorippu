@@ -18,4 +18,11 @@
  $(function() {
   $('#flash').fadeOut(2500);
   $('#post-button').fadeIn(3000)
+  
+  $('.ranking2').hover(function(){
+    $('.ranking').fadeIn();},
+    function(){
+    
+     }
+   );
 });

@@ -48,7 +48,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: hitoripu2_production
   username: hitoripu2
   password: <%= ENV['HITORIPU2_DATABASE_PASSWORD'] %>
+  
+  

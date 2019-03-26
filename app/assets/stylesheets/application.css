@@ -233,37 +233,37 @@ header {
   margin-right:20px;
   }  
   
-  .item {
-  margin :0 auto;
-  width:70%;
-  }
   
-
-
-
-
 .alert {
    margin:80px 120px 0px 120px;
    text-align:center;
 }
 
 /*user/showレイアウト*/
-.item {
-  width:80%;
+.row3 {
+  width: 100%; 
   }
-.item .panel-heading {
+.iteming {
+  width:28%;
+  float: left;
+  margin-left: 60px;
+  }
+.iteming .panel {
+  width:100%;
+  }
+.iteming .panel-heading {
   height:40px;
   margin-bottom:-20px;
   background-color:white;
   }
 
-.item .panel-body {
+.iteming .panel-body {
   height:320px;
   padding:0px;
   margin:0px;
   }
   
-  .item .panel-body img {
+  .iteming .panel-body img {
     width:100%;
     height:300px;
     }  
@@ -281,8 +281,8 @@ header {
    }
   .user-profile .id {
     position:absolute;
-      top:145px;
-      left:770px;
+      top:225px;
+      left:745px;
     }
   
 .user-profile .name {
@@ -298,6 +298,11 @@ header {
   height:230px;
   }
   
+/*ランキング*/
+.nav .ranking2{
+  display: none;
+  }
+
 /*タイムラインのレイアウト*/
 
 .post {
@@ -391,10 +396,6 @@ aside .comment{
 .items .panel .panel-footer {
   background-color:white;
   }
-  
-
-
- 
   
 
   
@@ -731,18 +732,10 @@ aside .media1 {
   height: 600px;
   margin-top: 60px;
   background-color: white;
-   padding-right: 120px;
-   padding-left: 120px;
+   padding-right: 170px;
+   padding-left: 170px;
   }
 
-.carousel-caption  p{
-z-index: 20;
-}
-.carousel-inner img {
-   width: 100%;
-   height: 800px;
-    
-  }
 
 
 
@@ -751,6 +744,7 @@ z-index: 20;
     
     html,body {
         width:100%;
+        height: 100%;
         margin:0;
         padding:0;
       }
@@ -774,8 +768,9 @@ z-index: 20;
     }
    
    .cover .cover-inner .cover-contents h1 {
-      margin-top:40px;
-      font-size:18px;
+     
+      margin-top:50px;
+      font-size:34px;
       font-weight:bold;
       color:white;}
       
@@ -783,10 +778,10 @@ z-index: 20;
     
     
     .cover .cover-inner .cover-contents h2{
-      margin-top: 240px;
+      margin-top: 280px;
       font-weight:bold;
       margin-left:30px;
-      font-size:18px;
+      font-size:34px;
       color:white;
       }
       
@@ -933,34 +928,37 @@ aside .comment{
   
 /*user/showのレイアウト*/
      
-    .item {
-    border: 2px solid blue;
-     width:100%;
-     padding-left:20px;
-     
+     .row3 {
+  width: 100%; 
+  }
+    .iteming {
+     width:33%;
+     float: left;
     }
   
-  .item .panel {
+  .iteming .panel {
     width:100%;
     margin-bottom:20px;
-    border: 2px solid yellow;
+    
+  
     }
-  .item .panel-heading {
+  .iteming .panel-heading {
     height:30px;
     }
   
-  .item .panel-body {
+  .iteming .panel-body {
     height:100px;
     padding:0px;
     }
-  .item .panel-body img {
+  .iteming .panel-body img {
     width:100%;
     height:100%;
     }
     
    .row {
      width:100%;
-     border: 2px solid red;
+    
+     margin: 0px;
      }
       
   .user-profile .icon .box {
@@ -989,14 +987,14 @@ aside .comment{
     float: left;
     }
   .all-post .panel {
-    border: 2px solid blue; 
+   
     width: 123%;
     margin-right: -10%;
     margin-left: -10%;
     }
   .all-post .item-title {
     font-size: 5px;
-    border: 1px solid red;
+    
     position: relative;
       top:0px;
       left: 15px;
@@ -1004,7 +1002,7 @@ aside .comment{
     
   .all-post .item-titles {
     font-size: 5px;
-    border: 1px solid orange;
+   
     position: relative;
       top:-30px;
       left: -32px;
@@ -1037,5 +1035,173 @@ aside .comment{
   }
 .button:hover {
   transform:scale(1.5);
+  }
+/*toppage2のレイアウト*/
+  .toppage2 {
+    margin-top:-130px;
+    width:100%;
+   padding:0;
+    height:650px;
+    background-color:#f2f2f2;
+    }
+    
+.toppage2 h2 {
+  padding-top:50px;
+  margin-bottom:40px;
+  }
+.toppage2 .text1{
+  text-align: center;
+  font-weight: bold; 
+  font-size: 15px;
+  margin-top: 10px;
+}
+  
+.heart-tag{
+ position:absolute;
+   top:300px;
+   left:280px;
+   right:0px;
+}
+
+.comment-tag {
+   position:absolute;
+   top:300px;
+   left:70px;
+   right:0px;
+}
+
+.image-tag {
+   position:absolute;
+   top:460px;
+   left:280px;
+   right:0px;
+   
+  }
+  
+.chat-tag {
+   position:absolute;
+   top:460px;
+   left:70px;
+   right:0px;
+}
+.comment-capital {
+  position:absolute;
+    top:370px;
+    left:30px;
+  font-weight:bold;
+  font-size: 12px;
+}
+
+.heart-capital{
+  position:absolute;
+    top:370px;
+    left:230px;
+  font-weight:bold;
+  font-size: 12px;
+  }
+
+.image-capital {
+  position:absolute;
+    top:530px;
+    left:230px;
+  font-weight:bold;
+  font-size: 12px;
+  }
+.chat-capital {
+  position:absolute;
+    top:530px;
+    left:30px;
+  font-weight:bold;
+  font-size: 12px;
+}
+/*toppage3のレイアウト*/
+
+  .toppage3 {
+   background-color: white;
+  }
+.toppage3 h1 {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  }  
+.toppage3-sign {
+  position: relative;
+    top:-130px;
+    left:110px;
+    background-color: #008DDD;
+    opacity:0.7;
+    color: white;
+    padding: 15px 30px 15px 30px;
+    border-radius: 20px;
+  }
+.toppage3 .carousel-inner{
+  padding: 0px;
+  width: 100%;
+  }
+ .toppage3 .iten .active {
+  width: 100%; 
+ }
+  .toppage3  {
+    height: 400px;
+    }
+  .carousel-inner {
+    width: 100%;
+    height: 350px;
+    }
+/*footerのレイアウト*/
+
+
+　#caption {
+   margin-top:300px;
+    background-color:white;
+    padding-bottom:30px ;
+  border: 3px solid black;
+  }
+/*入力フォーむ*/
+  .cover  .id {
+  background-color:#009933;
+  opacity:0.8;
+  color:white;
+  font-size:19px;
+  width:60%;
+  height:50px;
+  border-radius:10px;
+  position:absolute;
+  padding-top:11px;
+  top:60%;
+  left:24%;
+  font-weight:bold;
+  display: inline-block;
+  border-bottom: solid 4px #627295;
+  }
+ .cover .login {
+  background-color:#3366CC;
+  opacity:0.8;
+  color:white;
+  font-size:19px;
+  width:60%;
+  height:50px;
+  padding-top:11px;
+  border-radius:10px;
+  position:absolute;
+  top:75%;
+  left:24%;
+  font-weight:bold;
+  display: inline-block;
+  border-bottom: solid 4px #627295;
+  }
+
+ 
+  .ranking {
+    display: none;
+    position: fixed;
+      top:250px;
+      left: 30px;
+      width:90%;
+    z-index: 1;
+    }
+  .nav .ranking2{
+  display: inline-block;
   }
 }
