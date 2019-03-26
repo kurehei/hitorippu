@@ -363,6 +363,11 @@ header {
   }
 /*post/show*/
 
+
+.items .fa-trash {
+  color: black;
+  }
+  
 .comments {
   background-color:white;
   margin-top:10px;
