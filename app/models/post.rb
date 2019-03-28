@@ -6,6 +6,8 @@ class Post < ApplicationRecord
   validates :image, presence: true
   mount_uploader :image, ImageUploader
   
+  is_impressionable
+  
   def Post.search(search)
     return Post.all unless search
     Post.where(['name LIKE?', "%#{search}%"])

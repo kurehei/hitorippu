@@ -7,12 +7,19 @@ class User < ApplicationRecord
   validates :password , presence: true, length: { in: 6..15 } 
   has_secure_password
   validates :introduction, presence: true, length: { maximum: 150}
+  
+  
   has_many :posts
   has_many :comments
   has_many :relationships
   has_many :followings , through: :relationships, source: :follow
   has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
   has_many :followers, through: :reverse_of_relationships, source: :user
+  
+  mount_uploader :image, ImageUploader
+  
+  include Gravtastic
+ gravtastic
   
   
   def follow(other_user)

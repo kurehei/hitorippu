@@ -1,8 +1,8 @@
-<div class='row'>
+
   <div class='row2'>
    <div class="user-profile">
     <div class="icon text-center">
-      <img src="<%= gravatar_url(@user, size: 100) %>" alt="" class="img-circle">
+    	<%= image_tag avatar_url(@user) ,class:"img-circle",:size =>'150x140'%>
       <a class='box'><%= render 'relationships/follow_button',user: @user%></a>
     </div>
     <% if current_user == @user %>
@@ -12,7 +12,7 @@
       
       <p class='box'><%= @user.name%></p>
       <p><%= @user.introduction%></p>
-      <p>投稿 <%= @count_post %>件　 <span data-toggle="modal" data-target="#sampleModal">フォロー  </span><%= @count_followings %>人    <span data-toggle="modal" data-target="#sampleModal2">フォロワー</span> <%= @count_followers %>人</p>
+      <p>投稿 <%= @count_post %>件　 <span data-toggle="modal" data-target="#sampleModal">フォロー  </span><%= @count_followings %>人    <span data-toggle="modal" data-target="#sampleModal2">   フォロワー</span> <%= @count_followers %>人</p>
     </div>
     
   </div>
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
            
             
                

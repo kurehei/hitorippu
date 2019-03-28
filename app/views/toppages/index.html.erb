@@ -2,12 +2,12 @@
     <% if logged_in? %>
       <div class='toppage'>
         <%= render 'posts/timeline', posts: @posts%>
-          <div class='ranking'><%= render 'posts/ranks', rank: @rank%>
-          </div>
-           <div class="button" id='post-button'>
-              <%= link_to new_post_path do%>
-                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                      <span class='color'>投稿する</span>
+          <div class='ranking'><%= render 'posts/ranks', rank: @rank,post: @postings%></div>
+            
+             <div class="button" id='post-button'>
+                <%= link_to new_post_path do%>
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        <span class='color'>投稿する</span>
               <% end %>
            </div>
       </div>

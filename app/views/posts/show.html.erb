@@ -3,13 +3,10 @@
         <div class="panel panel-default">
             <div class="panel-heading text-center">
               <p class="itemt-title"><%= @post.name%></p>
-              
+              <p class="item-user-name"><%= link_to @post.user.name,user_path(@user)%></p>
               <% if @post.user == current_user%>
                  <%= link_to post_path(@post), method: :delete, data: { confirm: "削除しても本当に良いですか?" } ,class: 'fa fa-trash fa-2x' do%>
-                   <div class='fa fa-trash fa-2x'></div>
                  <% end %>
-                 
-               
               <% end %>
               
             </div>
@@ -32,7 +29,7 @@
                   <% end %>
               <% end %>
          　　<%=@likes_count %>
-         　
+         　<p class="pv-count">PV<%=  @post.impressionist_count %></p>
              <p><%= @post.content%></p>
             </div>
           </div>

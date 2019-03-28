@@ -28,6 +28,12 @@
           <%= f.password_field :password_confirmation, class: 'form-control',placeholder: "もう一回" %>
         </div>
         
+        <div class='form-group'>
+          <i class="fa fa-file-photo-o"></i>
+          <%= f.label :image, '顔写真'%>
+          <%= f.file_field :image%>
+        </div>
+        
         <div class="form-group" >
           <%= f.label :introduction, '一言' %>
           <%= f.text_area :introduction,  class: 'form-control',placeholder: "あなたについて一言",rows: 3 %>

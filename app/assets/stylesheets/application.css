@@ -275,13 +275,13 @@ header {
 
  .user-profile .icon .box {
    position:absolute;
-   top:145px;
-   left:765px;
+   top:265px;
+   left:755px;
    padding-bottom:0px;
    }
   .user-profile .id {
     position:absolute;
-      top:225px;
+      top:265px;
       left:745px;
     }
   
@@ -383,6 +383,7 @@ aside .comment{
   }
 .items .panel-heading {
   margin-bottom:-20px;
+  background-color: white;
   }
 
 .items .panel-heading .fa {
@@ -400,6 +401,24 @@ aside .comment{
 
 .items .panel .panel-footer {
   background-color:white;
+  }
+
+.items .pv-count {
+  position:relative;
+    top: -17%;
+    left: 12%;
+    color:white;
+    background-color: skyblue;
+    font-weight: bold;
+    padding: 0.5%;
+    width: 10%;
+  }
+
+.items .item-user-name {
+  position: absolute;
+    top: 3%;
+    left: 20%;
+    color: black;
   }
   
 
@@ -849,7 +868,7 @@ aside .media1 {
 .search .btn {
    position: absolute;
    top: 9px;
-    right: 190px;
+    right: 30%;
   background-color: #66CC99;
   height:36px;
   width:60px;
@@ -895,9 +914,14 @@ aside .media1 {
 
 .items .panel-heading .fa{
   position: absolute;
-    top: 23px;
-    left: 365px;
+    top: 3%;
+    left: 88%;
   }
+
+.items .pv-count {
+  width: 40px;
+  }
+
 /*コメント機能*/
   
   .comments {
@@ -921,11 +945,11 @@ aside .comment{
 
 .comment-submit {
   border-radius:15px;
-  width:90px;
+  width: 50%;
   height:25px;
   position:absolute;
   top:10%;
-  left:200px;
+  left:90%;
   background-color:skyblue;
   color:white;
   font-weight:bold;  
@@ -935,16 +959,17 @@ aside .comment{
      
      .row3 {
   width: 100%; 
+  
+  
   }
     .iteming {
-     width:33%;
-     float: left;
+     width:32%;
+     margin-left: 3px;
+     margin-right: 2px;
     }
   
   .iteming .panel {
-    width:100%;
     margin-bottom:20px;
-    
   
     }
   .iteming .panel-heading {
@@ -975,17 +1000,15 @@ aside .comment{
    
    .user-profile .id {
   position:absolute; 
-  top:145px;  
-  left:250px;
+  top:40%;  
+  left:55%;
   }
 /*post/index*/
   .post-index {
-    border: 2px solid red;
     width: 100%;
     }
   .all-post {
-    border: 2px solid green; 
-    width: 33.2%;
+    width: 33.3%;
     padding-left: 0%;
     padding-right: 0%;
     margin: 5% 0% 10% 0%;
@@ -999,7 +1022,6 @@ aside .comment{
     }
   .all-post .item-title {
     font-size: 5px;
-    
     position: relative;
       top:0px;
       left: 15px;
@@ -1024,14 +1046,15 @@ aside .comment{
     width:100%;
     height:100%;
     }
+ 
 /*投稿ボタン*/
   .button {
   width: 85px;
   height: 85px;
   line-height: 85px;
   position:fixed;
-  top:500px;
-  left:300px;
+  top:60%;
+  left:70%;
   background-color: #008DDD;
   border-radius: 50%;
   text-align:center;

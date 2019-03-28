@@ -14,8 +14,14 @@
            <tr>
              <th class='text-center'><%= "第#{i}位" %></th>
              <th class='text-center'><%= link_to rank.name%></th>
-             <th class='text-center'><%= link_to rank.user.name%></th>
-           </tr>
+             <th class='text-center'>
+             	  <% if rank.user.image? %>
+                  <%= image_tag rank.user.image.thumb.url  ,class:"img-circle",:size =>'30x30'%>
+                <% else %>
+                   <%= image_tag avatar_url(rank.user) ,class:"img-circle",:size =>'30x30'%>
+                <% end %>
+               <%= link_to rank.user.name, user_path(rank.user)%></th>
+             </tr>
          </tbody>
          <% end %>
        </table>

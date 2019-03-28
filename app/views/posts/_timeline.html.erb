@@ -1,13 +1,17 @@
 <div class='timeline'>
   <% if posts.empty?%>
-    <h2>まずは気軽に投稿してみよう！</h2>
+   
   <% else %>
     <% posts.each do |postings| %>
         <div class="post">
           <div class="col-md-9">
             <div class="panel panel-default">
               <div class="panel-heading text-center">
-                <p class='item-title text-left'><img src="<%= gravatar_url(current_user, size: 20) %>" alt="" class="img-circle"><%=link_to postings.user.name, user_path(current_user)%></p>
+                <p class='item-title text-left'>
+                　　
+                　　<%= image_tag avatar_url(current_user) ,class:"img-circle",:size =>'30x30'%>
+                  <%=link_to postings.user.name, user_path(current_user)%>
+                </p>
                 <div class='id'><%= link_to postings.name ,postings%></div>
                 
               </div>

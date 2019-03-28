@@ -39,7 +39,6 @@ class UsersController < ApplicationController
   def update
      @user=User.find(params[:id])
      
-     if current_user == @user
       if @user.update(user_params)
         flash[:success] = "登録しました"
         redirect_to @user
@@ -47,9 +46,7 @@ class UsersController < ApplicationController
         flash.now[:danger] = '失敗しました'
         render :edit
       end
-    else
-      redirect_to @user
-    end
+
   end
   
   def followings
@@ -67,6 +64,6 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduction)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduction, :image)
   end
 end
