@@ -2,7 +2,12 @@
   <div class='row2'>
    <div class="user-profile">
     <div class="icon text-center">
-    	<%= image_tag avatar_url(@user) ,class:"img-circle",:size =>'150x140'%>
+    	<% if @user.image? %>
+                  <%= image_tag @user.image.thumb.url  ,class:"img-circle",:size =>'150x140'%>
+        <% else %>
+                   <%= image_tag avatar_url(@user) ,class:"img-circle",:size =>'150x140'%>
+        <% end %>
+    	
       <a class='box'><%= render 'relationships/follow_button',user: @user%></a>
     </div>
     <% if current_user == @user %>

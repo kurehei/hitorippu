@@ -8,9 +8,11 @@
             <div class="panel panel-default">
               <div class="panel-heading text-center">
                 <p class='item-title text-left'>
-                　　
-                　　<%= image_tag avatar_url(current_user) ,class:"img-circle",:size =>'30x30'%>
-                  <%=link_to postings.user.name, user_path(current_user)%>
+                　　<% if postings.user.image? %>
+                      <%= image_tag postings.user.image.thumb.url  ,class:"img-circle",:size =>'30x30'%>
+                    <% else %>
+                       <%= image_tag avatar_url(postings.user) ,class:"img-circle",:size =>'30x30'%>
+                    <% end %>
                 </p>
                 <div class='id'><%= link_to postings.name ,postings%></div>
                 
