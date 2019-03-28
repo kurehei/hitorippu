@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :require_user_logged_in
-  before_action :correct_user, only: [:destroy]
+  before_action :correct_user, only: [:destroy,:show]
   impressionist :actions => [:show]
   
   def index
@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   end
   
  def show
-  @post = Post.find(params[:id])
   @likes_count = Like.where(post_id: @post.id).count
   @comments = @post.comments
   @comment =Comment.new
@@ -44,7 +43,7 @@ class PostsController < ApplicationController
    private
   
   def correct_user
-    @posting = current_user.posts.find_by(id: params[:id])
+    @post = current_user.posts.find_by(id: params[:id])
     unless @post
       redirect_to root_url
     end
