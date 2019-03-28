@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :require_user_logged_in
-  before_action :correct_user, only: [:destroy,:rank]
+  before_action :correct_user, only: [:rank,:destroy]
   impressionist :actions => [:show]
   
   def index
@@ -33,6 +33,7 @@ class PostsController < ApplicationController
   end
    
    def destroy
+    
      @posting.destroy
      flash[:danger]='削除しました。'
      redirect_back(fallback_location: root_path)

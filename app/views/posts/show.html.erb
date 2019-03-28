@@ -5,8 +5,7 @@
               <p class="itemt-title"><%= @post.name%></p>
               <p class="item-user-name"><%= link_to @post.user.name,user_path(@user)%></p>
               <% if @post.user == current_user%>
-                 <%= link_to post_path(@post), method: :delete, data: { confirm: "削除しても本当に良いですか?" } ,class: 'fa fa-trash fa-2x' do%>
-                 <% end %>
+                 <div class="fa fa-trash fa-2x"></div>
               <% end %>
               
             </div>

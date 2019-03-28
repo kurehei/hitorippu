@@ -13,7 +13,7 @@
          <tbody>
            <tr>
              <th class='text-center'><%= "第#{i}位" %></th>
-             <th class='text-center'><%= link_to rank.name%></th>
+             <th class='text-center'><%= rank.name%></th>
              <th class='text-center'>
              	  <% if rank.user.image? %>
                   <%= image_tag rank.user.image.thumb.url  ,class:"img-circle",:size =>'30x30'%>
