@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   end
    
    def destroy
-     @post.destroy
+     @posting.destroy
      flash[:danger]='削除しました。'
      redirect_back(fallback_location: root_path)
    end
@@ -43,7 +43,7 @@ class PostsController < ApplicationController
    private
   
   def correct_user
-    @post = current_user.posts.find_by(id: params[:id])
+    @posting = current_user.posts.find_by(id: params[:id])
     unless @post
       redirect_to root_url
     end
