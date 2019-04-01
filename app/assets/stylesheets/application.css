@@ -59,6 +59,10 @@ header {
   margin-bottom:-16px;
   }
   
+.navbar-right .fa-users {
+ padding-top: 20px;
+ font-size: 18px;
+}
 /*トップページのレイアウト*/
 
 
@@ -760,7 +764,14 @@ aside .media1 {
    padding-left: 170px;
   }
 
+/*users/indexのデザイン*/
+.user-introduction .panel-heading{
+  display: none;
+  }
 
+.user-introduction .panel p{
+  color: red;
+  }
 
 
 /*レスポンシブデザイン*/ 

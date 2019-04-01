@@ -13,6 +13,7 @@
                     <% else %>
                        <%= image_tag avatar_url(postings.user) ,class:"img-circle",:size =>'30x30'%>
                     <% end %>
+                   <%= link_to  postings.user.name,user_path( postings)%>
                 </p>
                 <div class='id'><%= link_to postings.name ,postings%></div>
                 

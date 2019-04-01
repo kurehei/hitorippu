@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
- before_action :require_user_logged_in, only: [:index, :show]
+ before_action :require_user_logged_in, only: [:index, :show,:edit,:update]
  
   def index
     @users=User.search(params[:search])
@@ -11,7 +11,6 @@ class UsersController < ApplicationController
      counts(@user)
       @followings = @user.followings.page(params[:page])
       @followers =@user.followers.page(params[:page])
-      
   end
  
   def new
@@ -39,11 +38,11 @@ class UsersController < ApplicationController
   def update
      @user=User.find(params[:id])
      
-      if @user.update(user_params)
-        flash[:success] = "登録しました"
+      if @user.update_attributes(user_params)
+        flash[:success] = "変更しました"
         redirect_to @user
       else
-        flash.now[:danger] = '失敗しました'
+        flash.now[:danger] = '変更に失敗しました'
         render :edit
       end
 

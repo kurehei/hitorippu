@@ -1,0 +1,28 @@
+<div class='text-center'> 
+  <%=form_tag(users_path,:method => 'get')do %>
+    <%= text_field_tag :search , '',class:"search-form",placeholder: "○○さんなど"%>
+    <%= button_tag( class: "btn btn-sm btn-primary") do %>
+       <%= content_tag :span, "検索", class: "fa fa-search" %>
+    <% end %>
+  <% end %>
+</div>
+   <% @users.each do |users| %>
+<div class="col-md-2 col-xs-3">
+   <div class="user-introduction">
+   <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <p class="item-title"></p>
+            </div>
+            <div class="panel-body text-center">
+            　 <% if users.image? %>
+                  <%= image_tag users.image.thumb.url  ,class:"img-circle text-center",:size =>'90x90'%>
+               <% else %>
+                  <%= image_tag avatar_url(users) ,class:"img-circle text-center",:size =>'90x90'%>
+               <% end %>
+                <p class="text-center"><%= link_to users.name,user_path(users)%></p>
+                <p class="text-center"><%= users.introduction%></p>
+            </div>
+          </div>
+  </div>
+</div>
+<% end %>

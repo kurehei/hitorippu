@@ -1,5 +1,4 @@
-
-  <div class='row2'>
+<div class='row2'>
    <div class="user-profile">
     <div class="icon text-center">
     	<% if @user.image? %>
@@ -7,7 +6,6 @@
         <% else %>
                    <%= image_tag avatar_url(@user) ,class:"img-circle",:size =>'150x140'%>
         <% end %>
-    	
       <a class='box'><%= render 'relationships/follow_button',user: @user%></a>
     </div>
     <% if current_user == @user %>

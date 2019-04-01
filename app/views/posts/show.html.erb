@@ -3,7 +3,14 @@
         <div class="panel panel-default">
             <div class="panel-heading text-center">
               <p class="itemt-title"><%= @post.name%></p>
-              <p class="item-user-name"><%= link_to @post.user.name,user_path(@user)%></p>
+              <p class="item-user-name">
+                 　<% if  @post.user.image? %>
+                      <%= image_tag  @post.user.image.thumb.url  ,class:"img-circle",:size =>'30x30'%>
+                    <% else %>
+                       <%= image_tag avatar_url( @post.user) ,class:"img-circle",:size =>'30x30'%>
+                    <% end %>
+                   <%= link_to @post.user.name,user_path(@user)%>
+              </p>
               <% if @post.user == current_user%>
                  <div class="fa fa-trash fa-2x"></div>
               <% end %>
@@ -39,11 +46,15 @@
       <ul class="media-list">
           <li class="media">
               <div class="media-left">
-                  <img class="media-object img-rounded media1" src="<%= gravatar_url(current_user, { size: 50 }) %>" alt="">
+                  　<% if  @post.user.image? %>
+                      <%= image_tag  @post.user.image.thumb.url  ,class:"img-circle",:size =>'50x50'%>
+                    <% else %>
+                       <%= image_tag avatar_url( @post.user) ,class:"img-circle",:size =>'50x50'%>
+                    <% end %>
               </div>
               <div class='media-body'>
                  <div>
-                  <%= current_user.name%>
+                 <%= link_to @post.user.name,user_path(@user)%>
                  </div>
                  <div class='comment'>
                           <%= form_for [@post, @comment] do |f| %>
@@ -64,12 +75,16 @@
         <li class='media'>
               
             <div class='media-left'>
-               <img class="media-object img-rounded" src="<%= gravatar_url(c.user, { size: 50 }) %>" alt="">
+               　<% if  @post.user.image? %>
+                  <%= image_tag  @post.user.image.thumb.url  ,class:"img-circle",:size =>'60x60'%>
+                 <% else %>
+                 <%= image_tag avatar_url( @post.user) ,class:"img-circle",:size =>'60x60'%>
+                    <% end %>
                 <!--コメント-->
             </div>
                <div class='media-body'>
                  <div>
-                  <a href="/users/<%= @post.user.id %>"><%= c.user.name %></a>
+                  <%= link_to @post.user.name,user_path(@user)%>
                  </div> 
                  <div> 
                   <%= c.content %>
