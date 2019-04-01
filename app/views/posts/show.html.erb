@@ -46,15 +46,15 @@
       <ul class="media-list">
           <li class="media">
               <div class="media-left">
-                  　<% if  @post.user.image? %>
-                      <%= image_tag  @post.user.image.thumb.url  ,class:"img-circle",:size =>'50x50'%>
+                  　<% if  current_user.image? %>
+                      <%= image_tag  current_user.image.thumb.url  ,class:"img-circle",:size =>'50x50'%>
                     <% else %>
-                       <%= image_tag avatar_url( @post.user) ,class:"img-circle",:size =>'50x50'%>
+                       <%= image_tag avatar_url( current_user) ,class:"img-circle",:size =>'50x50'%>
                     <% end %>
               </div>
               <div class='media-body'>
                  <div>
-                 <%= link_to @post.user.name,user_path(@user)%>
+                 <%= link_to current_user.name,user_path(current_user)%>
                  </div>
                  <div class='comment'>
                           <%= form_for [@post, @comment] do |f| %>
@@ -75,16 +75,16 @@
         <li class='media'>
               
             <div class='media-left'>
-               　<% if  @post.user.image? %>
-                  <%= image_tag  @post.user.image.thumb.url  ,class:"img-circle",:size =>'60x60'%>
-                 <% else %>
-                 <%= image_tag avatar_url( @post.user) ,class:"img-circle",:size =>'60x60'%>
+               　<% if  current_user.image? %>
+                      <%= image_tag  current_user.image.thumb.url  ,class:"img-circle",:size =>'50x50'%>
+                    <% else %>
+                       <%= image_tag avatar_url( current_user) ,class:"img-circle",:size =>'50x50'%>
                     <% end %>
                 <!--コメント-->
             </div>
                <div class='media-body'>
                  <div>
-                  <%= link_to @post.user.name,user_path(@user)%>
+                   <%= link_to current_user.name,user_path(current_user)%>
                  </div> 
                  <div> 
                   <%= c.content %>
