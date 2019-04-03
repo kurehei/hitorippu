@@ -20,8 +20,6 @@
 html,body {
     height:90%;
     width:100%;
-   margin:0px;
-   padding:0px;
    background-color:#f2f2f2;
   }
 
@@ -41,6 +39,7 @@ header {
   left:0;
   margin:0;
   right :0;
+  height:55px;
   }
 
 .navbar-header {
@@ -51,9 +50,6 @@ header {
   color :#FFFFFF;
   }
   
-.navbar .nav {
-  margin-right:-125px;
-  }
   
 .navbar li p{
   margin-bottom:-16px;
@@ -244,9 +240,49 @@ header {
 }
 
 /*user/showレイアウト*/
-.row3 {
-  width: 100%; 
-  }
+
+.user-profile .id {
+ position: absolute;
+   top:33%;
+   left: 53%;
+}
+.user-profile .box {
+   position: absolute;
+   top:33%;
+   left: 53%;
+}
+
+.user-profile .name {
+  margin-bottom: 40px;
+}
+.user-profile .name h1 {
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: bold;
+}
+.user-profile .status ul {
+  margin: 0 auto 10px;
+  padding: 0;
+  display: table;
+}
+.user-profile .status ul li {
+  width: 120px;
+  padding: 5px 0;
+  border-right: 1px solid #ddd;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #777;
+}
+.user-profile .status ul li:last-child {
+  border: none;
+}
+.user-profile .status ul li .status-label {
+  font-size: 12px;
+}
+.user-profile .status ul li .status-value {
+  font-size: 18px;
+}
+
 .iteming {
   width:28%;
   float: left;
@@ -272,32 +308,16 @@ header {
     height:300px;
     }  
 
-.user-profile {
-  margin-top:30px;
-  margin-bottom:10px;
-  }
-
- .user-profile .icon .box {
-   position:absolute;
-   top:265px;
-   left:755px;
-   padding-bottom:0px;
-   }
-  .user-profile .id {
-    position:absolute;
-      top:265px;
-      left:745px;
-    }
-  
-.user-profile .name {
-    margin-top:0px;
-    margin-bottom:35px;
-  }
-  
-.user-profile p {
-  margin-top:20px;
-  }
-
+.edit-profile-btn {
+  margin: 15px 0 0 15px;
+  font-weight: bold;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 26px;
+  border-color: #dbdbdb;
+  font-size: 14px;
+}
+ 
 .items .panel .panel-footer {
   height:230px;
   }
@@ -321,12 +341,10 @@ header {
   }
 
 
-.post .panel-heading .id {
-  position:absolute; 
-  top:25px;
-  right:290px;
-  
-  }
+.item-title3 {
+  position: absolute;
+    top: 20px;
+}
 
 .post .panel-body {
   height:490px;
@@ -421,7 +439,6 @@ aside .comment{
 .items .item-user-name {
   position: absolute;
     top: 3%;
-    left: 20%;
     color: black;
   }
   
@@ -453,7 +470,7 @@ h2 {
 .media-body .comment {
   position:absolute;
    top:5px;
-   left:100px;
+   left:15%;
   
   }
   
@@ -464,17 +481,17 @@ h2 {
    }
   .search {
   list-style:none;
-  margin-right: 400px;
+  margin-right: 20px;
   
   }
 .search-form {
   height:35px;
-  width:260px;
+  width:240px;
   margin-right: 3px;
   margin-top:10px;
   } 
 .search .btn {
-  background-color: #66CC99;
+  background-color: #FFCC66;
   height:36px;
   width:60px;
   margin-bottom: 2px;
@@ -765,12 +782,23 @@ aside .media1 {
   }
 
 /*users/indexのデザイン*/
+
+.user-introduction {
+ 
+  margin-top: 40px;
+  }
+
 .user-introduction .panel-heading{
   display: none;
   }
 
+.user-introduction .panel-body {
+ height: 200px; 
+ padding-right: 30px;
+}
+
 .user-introduction .panel p{
-  color: red;
+  margin-top: 10px;
   }
 
 

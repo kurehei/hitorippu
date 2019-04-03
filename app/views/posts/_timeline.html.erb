@@ -7,15 +7,16 @@
           <div class="col-md-9">
             <div class="panel panel-default">
               <div class="panel-heading text-center">
-                <p class='item-title text-left'>
+                <p class="timeline-itemt-title"><%= link_to postings.name ,postings%></p>
+                <p class='item-title3'>
                 　　<% if postings.user.image? %>
                       <%= image_tag postings.user.image.thumb.url  ,class:"img-circle",:size =>'30x30'%>
                     <% else %>
                        <%= image_tag avatar_url(postings.user) ,class:"img-circle",:size =>'30x30'%>
                     <% end %>
-                   <%= link_to  postings.user.name,user_path( postings)%>
+                     <%= link_to  postings.user.name,user_path( postings)%>
                 </p>
-                <div class='id'><%= link_to postings.name ,postings%></div>
+              
                 
               </div>
               <div class="panel-body">

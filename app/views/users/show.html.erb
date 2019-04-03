@@ -1,5 +1,4 @@
-<div class='row2'>
-   <div class="user-profile">
+<div class="user-profile">
     <div class="icon text-center">
     	<% if @user.image? %>
                   <%= image_tag @user.image.thumb.url  ,class:"img-circle",:size =>'150x140'%>
@@ -12,16 +11,36 @@
       <div class='id'><%= link_to 'プロフィール編集', edit_user_path(current_user),class: 'btn btn-default' %></div>
     <% end %>
     <div class="name text-center">
-      
-      <p class='box'><%= @user.name%></p>
-      <p><%= @user.introduction%></p>
-      <p>投稿 <%= @count_post %>件　 <span data-toggle="modal" data-target="#sampleModal">フォロー  </span><%= @count_followings %>人    <span data-toggle="modal" data-target="#sampleModal2">   フォロワー</span> <%= @count_followers %>人</p>
+      <h1><%= @user.name%></h1>
+      <%= @user.introduction%>
     </div>
+  <div class="status text-center">
+    <ul>
+      <li>
+        <div class="status-label">投稿</div>
+        <div id="want_count" class="status-value">
+          <%= @count_post %>
+        </div>
+      </li>
+      <li>
+        <div class="status-label"><span data-toggle="modal" data-target="#sampleModal"> フォロー </span></div>
+        <div id="have_count" class="status-value">
+          <%= @count_followings %>
+        </div>
+      </li>
+      <li>
+        <div class="status-label">  <span data-toggle="modal" data-target="#sampleModal2">フォロワー </span> </div>
+        <div id="have_count" class="status-value">
+          <%= @count_followers %>人
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
     
   </div>
   <%= render 'posts/posts', posts: @posts%>
   </div>
-</div>
 
 
 <!-- モーダル・ダイアログ(フォロー) -->
