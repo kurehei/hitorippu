@@ -2,7 +2,7 @@
     <% if logged_in? %>
       <div class='toppage'>
         <%= render 'posts/timeline', posts: @posts%>
-          <div class='ranking'><%= render 'posts/ranks', rank: @rank,post: @postings%></div>
+          <%= render 'posts/ranks', rank: @rank,post: @postings%></div>
             
              <div class="button" id='post-button'>
                 <%= link_to new_post_path do%>

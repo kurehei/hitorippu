@@ -329,11 +329,7 @@ header {
 
 /*タイムラインのレイアウト*/
 
-.post {
-  width:60%;
-  margin-left:280px;
-  
-  }
+
   
 .post .panel-heading {
   margin-bottom:-20px;
@@ -368,8 +364,8 @@ header {
   height: 85px;
   line-height: 85px;
   position:fixed;
-  top:600px;
-  left:1300px;
+  top:80%;
+  left:80%;
   background-color: #008DDD;
   border-radius: 50%;
   text-align:center;
@@ -390,21 +386,15 @@ header {
   color: black;
   }
   
-.comments {
-  background-color:white;
-  margin-top:10px;
-  width:680px;
+aside {
+   background-color:white;
   }
   
-aside .comment{
-  margin-top:20px;
-  }
   
 .items .panel{
   margin-right:0;
   }
 .items .panel-heading {
-  margin-bottom:-20px;
   background-color: white;
   }
 
@@ -574,7 +564,7 @@ h2 {
    
   /*コメント機能のレイアウト調整*/ 
 .comment-text {
-  width:280%;
+  width:240%;
   height:30px;
   border:none;
   border-bottom:solid 1px;
@@ -587,7 +577,7 @@ h2 {
   height:35px;
   position:absolute;
   top:-10%;
-  left:290%;
+  left:240%;
   background-color:skyblue;
   color:white;
   font-weight:bold;  
@@ -735,12 +725,10 @@ aside .media1 {
   }
 /*ランキング機能のポジション*/ 
 .ranking {
-  width:350px;
-  position:fixed;
-    top:90px;
-    left:970px;
     background-color:white;
-  padding:30px;
+    position: fixed;
+      top: 85px;
+    width: 30%;
   }
 
 .ranking h1 {
