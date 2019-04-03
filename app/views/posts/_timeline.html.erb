@@ -10,9 +10,9 @@
                 <p class="timeline-itemt-title"><%= link_to postings.name ,postings%></p>
                 <p class='item-title3'>
                 　　<% if postings.user.image? %>
-                      <%= image_tag postings.user.image.thumb.url  ,class:"img-circle",:size =>'30x20'%>
+                      <%= image_tag postings.user.image.thumb.url  ,class:"img-circle",:size =>'30x30'%>
                     <% else %>
-                       <%= image_tag avatar_url(postings.user) ,class:"img-circle",:size =>'20x20'%>
+                       <%= image_tag avatar_url(postings.user) ,class:"img-circle",:size =>'30x30'%>
                     <% end %>
                      <%= link_to  postings.user.name,user_path( postings)%>
                 </p>
