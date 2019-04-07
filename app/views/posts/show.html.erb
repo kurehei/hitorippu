@@ -11,9 +11,11 @@
                     <% end %>
                    <%= link_to @post.user.name,user_path(@user)%>
               </p>
+              <p class="trash-icon text-right">
               <% if @post.user == current_user%>
-                 <div class="fa fa-trash fa-2x"></div>
+                 <a href="#" class="fa fa-trash fa-2x text-right"></a>
               <% end %>
+              </p>
               
             </div>
             <div class="panel-body">
@@ -36,7 +38,7 @@
               <% end %>
          　　<%=@likes_count %>
          　<p class="pv-count">PV<%=  @post.impressionist_count %></p>
-             <p><%= @post.content%></p>
+           <p><%= @post.content%></p>
             </div>
           </div>
          </div> 
@@ -86,7 +88,19 @@
                    <%= link_to c.user.name,user_path(c.user)%>
                  </div> 
                  <div> 
-                  <%= c.content %>
+                 
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class='gravatar'>
+                                &#8230;
+                      </span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">編集</a></li>
+                        <li role="separator" class="divider"></li>
+                      <li><a href="#">削除</a></li>
+                    </ul>
+                    </div>
+                  <%= c.content %> 
                  </div>
                   <hr>
                </div>
