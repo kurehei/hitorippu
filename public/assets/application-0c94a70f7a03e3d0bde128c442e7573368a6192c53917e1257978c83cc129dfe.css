@@ -1,0 +1,1282 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ 
+ 
+ 
+ 
+html,body {
+    height:90%;
+    width:100%;
+   background-color:#f2f2f2;
+  }
+
+
+header {
+  margin-bottom:0px;
+  }
+
+.panel-heading {
+ background-color:white; 
+}
+.navbar {
+  background-color:#222222;
+   position: fixed;
+  top:0;
+  left:0;
+  margin:0;
+  right :0;
+  height:55px;
+  }
+
+.navbar-header {
+  font-size: 35px;
+  }
+  
+.navbar-brand {
+  font-family: cursive;
+  color: red;
+  }
+  
+  
+.navbar li p{
+  margin-bottom:-16px;
+  }
+  
+.navbar-right .fa-users {
+ padding-top: 20px;
+ font-size: 18px;
+}
+/*トップページのレイアウト*/
+
+
+.cover {
+  width:100%;
+  height:100%;
+   background: url("/images/covers-bg.jpg")center center no-repeat;
+  background-size: cover;
+  
+  
+  }
+.cover-inner {
+  height:100%;
+  background-color:rgba(0,0,0,0.3);
+  overflow: hidden;
+  }
+
+.cover .cover-inner .cover-contents {
+ text-align:center;
+ padding-top:70px;
+ font-family:serif;
+ 
+  }
+
+  .cover .cover-inner .cover-contents h1 {
+      margin-top:40px;
+      font-size:60px;
+      font-weight:bold;
+      color:white;
+    }  
+.cover  .id {
+  background-color:#009933;
+  opacity:0.8;
+  color:white;
+  font-size:15px;
+  width:20%;
+  height:40px;
+  border-radius:10px;
+  position:absolute;
+  padding-top:7px;
+  top:55%;
+  left:29%;
+  font-weight:bold;
+  display: inline-block;
+  border-bottom: solid 4px #627295;
+  }
+  
+  .cover .id:active {
+     
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/}
+      
+    
+  .cover .login {
+  background-color:#3366CC;
+  opacity:0.8;
+  color:white;
+  font-size:15px;
+  width:20%;
+  height:40px;
+  padding-top:7px;
+  border-radius:10px;
+  position:absolute;
+  top:55%;
+  right:29%;
+  font-weight:bold;
+  display: inline-block;
+  border-bottom: solid 4px #627295;
+  }
+
+ .cover .login:active {
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+      }
+
+      
+/*layouts/toppage2のレイアウト*/
+  
+  .toppage2 {
+    margin-top:-130px;
+    width:100%;
+   padding:0;
+    height:650px;
+    background-color:#f2f2f2;
+    }
+    
+.toppage2 h2 {
+  padding-top:50px;
+  margin-bottom:40px;
+  }
+.toppage2 .text1{
+  text-align: center;
+  font-weight: bold; 
+  font-size: 20px;
+  margin-top: 10px;
+}
+  
+.heart-tag{
+ position: absolute;
+   top:20%;
+    left: 60%;
+}
+
+.comment-tag {
+   position: absolute;
+   top:20%;
+   left: 29%;
+   right:0px;
+}
+
+.image-tag {
+   position:absolute;
+   top:460px;
+   left: 29%;
+   right:0px;
+  }
+  
+.chat-tag {
+   position:absolute;
+   top:460px;
+    left: 60%;
+   right:0px;
+}
+.comment-capital {
+  position:absolute;
+    top:370px;
+   left: 29%;
+  font-weight:bold;
+}
+
+.heart-capital{
+  position:absolute;
+    top:370px;
+    left: 60%;
+  font-weight:bold;
+  }
+
+.image-capital {
+  position:absolute;
+    top:530px;
+   left: 29%;
+  font-weight:bold;
+  }
+.chat-capital {
+  position:absolute;
+    top:530px;
+    left: 60%;
+  font-weight:bold;
+}
+/*フッターのレイアウト*/
+#caption {
+   padding-top:30px;
+   background-color:white;
+    padding-bottom:30px ;
+  }
+
+footer {
+  background-color:white;
+  }
+
+#smooth-scroll {
+ width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  opacity: 0.6;
+}
+
+#smooth-scroll a {
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+  
+#smooth-scroll a::before {
+  font-family: FontAwesome;
+  content: '\f139';
+  font-size: 60px;
+  color: #3fefee;
+}
+.alert {
+   margin:80px 120px 0px 120px;
+   text-align:center;
+}
+
+/*user/showレイアウト*/
+
+.user-profile .id {
+ position: absolute;
+   top:18%;
+   left: 58%;
+}
+.user-profile .box {
+   position:  absolute;
+   top: 18%;
+   left: 58%;
+}
+
+.user-profile .name {
+  margin-bottom: 40px;
+}
+.user-profile .name h1 {
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: bold;
+}
+.user-profile .status ul {
+  margin: 0 auto 10px;
+  padding: 0;
+  display: table;
+}
+.user-profile .status ul li {
+  width: 120px;
+  padding: 5px 0;
+  border-right: 1px solid #ddd;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #777;
+}
+.user-profile .status ul li:last-child {
+  border: none;
+}
+.user-profile .status ul li .status-label {
+  font-size: 12px;
+}
+.user-profile .status ul li .status-value {
+  font-size: 18px;
+}
+
+.iteming {
+  width:28%;
+  float: left;
+  margin-left: 60px;
+  }
+.iteming .panel {
+  width:100%;
+  }
+.iteming .panel-heading {
+  height:40px;
+  margin-bottom:-20px;
+  background-color:white;
+  }
+
+.iteming .panel-body {
+  height:320px;
+  padding:0px;
+  margin:0px;
+  }
+  
+  .iteming .panel-body img {
+    width:100%;
+    height:300px;
+    }  
+
+.edit-profile-btn {
+  margin: 15px 0 0 15px;
+  font-weight: bold;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 26px;
+  border-color: #dbdbdb;
+  font-size: 14px;
+}
+ 
+.items .panel .panel-footer {
+  height:230px;
+  }
+  
+/*ランキング*/
+.nav .ranking2{
+  display: none;
+  }
+
+/*タイムラインのレイアウト*/
+
+
+  
+.post .panel-heading {
+  margin-bottom:-20px;
+  background-color:white;
+  }
+
+
+.item-title3 {
+  position: absolute;
+    top: 20px;
+}
+
+.post .panel-body {
+  height:490px;
+  padding :0;  
+  }
+  
+.post .panel-body img {
+  width:100%;
+  height:470px;
+  
+}
+
+.post .panel-footer{
+  width:100%;
+  height:70px;
+  background-color:white;
+  
+  }
+  .button {
+  width: 85px;
+  height: 85px;
+  line-height: 85px;
+  position:fixed;
+  top:80%;
+  left:80%;
+  background-color: #008DDD;
+  border-radius: 50%;
+  text-align:center;
+  transition: 1s;
+  -webkit-transition: 1s;
+  }
+.button:hover {
+  transform:scale(1.5);
+  }
+
+.button span {
+  color:#FFFFFF;
+  }
+/*post/show*/
+
+
+.items .fa-trash {
+  color: black;
+  }
+  
+aside {
+   background-color:white;
+  }
+  
+  
+.items .panel{
+  margin-right:0;
+  }
+.items .panel-heading {
+  background-color: white;
+  margin-bottom:-20px;
+  }
+
+.items .panel-heading .fa {
+   position:absolute;
+   top:20px; 
+   left:550px;
+}
+.items .panel .panel-body {
+  height:395px;
+  padding:0;
+}
+.items .panel .panel-body  img{
+  width:100%;
+}
+
+.items .panel .panel-footer {
+  background-color:white;
+  }
+
+.items .pv-count {
+  position:relative;
+    top: -17%;
+    left: 12%;
+    color:white;
+    background-color: skyblue;
+    font-weight: bold;
+    padding: 0.5%;
+    width: 10%;
+  }
+
+.items .item-user-name {
+  position: absolute;
+    top: 3%;
+    color: black;
+  }
+  
+
+  
+.like-btn {
+  color: #8899a6;
+  margin-right:-20px;
+  margin-bottom:10px;
+}
+
+
+.like-btn-unlike {
+  color: #ff2581;
+  margin-right:-20px;
+  margin-bottom:10px;
+}
+
+h2 {
+  margin-top:70px;
+  font-size:40px;
+  text-align:center;
+  }
+
+.media-list {
+  margin-top:10px;
+  }
+
+.media-body .comment {
+  position:absolute;
+   top:5px;
+   left:15%;
+  
+  }
+  
+/*ユーザー検索フォーム*/
+ 
+ .user-index {
+   height:100%;
+   }
+  .search {
+  list-style:none;
+  margin-right: 20px;
+  
+  }
+.search-form {
+  height:35px;
+  width:240px;
+  margin-right: 3px;
+  margin-top:10px;
+  } 
+.search .btn {
+  background-color: #FFCC66;
+  height:36px;
+  width:60px;
+  margin-bottom: 2px;
+  color: white;
+  padding-right: 4px;
+  }
+
+.search-user {
+  width:100%;
+  }
+
+.user-box {
+  border:ridge 1px black;
+  height:210px;
+  width:14%;
+  float:left;
+  margin-right:10px;
+  margin-top:70px;
+  margin-left:120px;
+  padding:15px;
+  }
+.user-box img {
+ margin-left:30px;
+  }
+.user-box a{
+  position:relative;
+  top:0px;
+  left:60px;
+  font-size:15px;
+  }
+  .user-box p{
+  position:relative;
+  top:5px;
+  left:50px;
+  font-size:15px;
+  }
+
+  
+/*投稿一覧のレイアウト*/
+.post-index {
+  height:100%;
+  }
+
+.all-post .item-titles {
+  position:absolute;
+    top:20px;
+  }
+.all-post {
+  width:90%;
+  margin-left:80px;
+  margin-top:50px;
+  }
+.all-post .panel-heading {
+  height:40px;
+  margin-bottom:-20px;
+  background-color:white;
+  }
+
+.all-post .panel-body {
+  height:380px;
+  padding:0px;
+  margin:0px;
+  }
+  
+  .all-post .panel-body img {
+    width:100%;
+    height:360px;
+    }  
+
+/*flashメッセージのレイアウト*/
+.alert { 
+    z-index:2;
+    position:absolute;
+    top:0px;
+    left:10%;
+    right:10%;
+   }
+   
+   
+   
+  /*コメント機能のレイアウト調整*/ 
+.comment-text {
+  width:170%;
+  height:30px;
+  border:none;
+  border-bottom:solid 1px;
+  background:none;
+  margin-top: 30px;
+  }
+
+.comment-submit {
+  border-radius:15px;
+  width:120px;
+  height:35px;
+  position: absolute;
+  top:50%;
+  left:180%;
+  background-color:skyblue;
+  color:white;
+  font-weight:bold;  
+  }
+  
+  
+  /*ログイン画面の新規登録ボタンのレイアウト調整*/
+  
+.login {
+  height:90%;
+  }
+.login .panel-heading {
+  background-color:white;
+  }
+.login .panel-body {
+  height:500px;
+  }  
+
+.login .panel-body p{
+  padding-top:30px;
+  font-weight:bold;
+  font-size:15px;
+  }
+.login .panel-body hr {
+  padding-bottom:45px;
+  }
+
+.new-button{
+ text-align:center;
+ margin-bottom:30px;
+ margin-top:0px;
+  }
+  
+.new-btn {
+   width:180px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  }
+  
+  .new-btn:active {
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
+.login-btn {
+  position:relative;
+    top:40px;
+  height:50px;
+  width:180px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 7px;
+    
+  }
+  .login-btn:active {
+     
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
+/*新規登録機能のレイアウト*/
+
+  .user-new .panel-heading{
+    background-color: white;
+    }
+  
+  .user-new .btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: blue;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 7px;
+    }
+  
+  .user-new .btn:acrive {
+    -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
+  /*コメントのレイアウト調整*/
+  
+aside .media1 {
+  margin-bottom:20px;
+  }  
+.new-btn {
+  color:white;
+  background-color:skyblue;
+ padding:18px;
+ padding-right:30px;
+ padding-left:30px;
+ border-radius:10px;
+ font-weight:bold;
+ font-size:15px;
+ 
+  }
+
+/*投稿ページのレイアウト*/
+
+.post-new {
+ height:100%;
+ font-size:18px;
+  }
+  
+ .post-new .panel-heading {
+   background-color: white;
+   }
+   
+.post-new .panel{
+  height:600px;
+  }
+.post-new .panel-body .form-group{
+  margin-top:40px;
+  }
+
+.post-new .panel-body .form-group3{
+  margin-bottom: 50px;
+  margin-top:40px;
+  }
+
+.post-new .btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 7px;
+  }
+
+  .post-new .btn:acrive {
+    -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;
+  }
+/*ランキング機能のポジション*/ 
+.ranking {
+    background-color:white;
+    position: fixed;
+      top: 12%;
+      left: 70%;
+    width: 22%;
+  }
+
+.ranking h1 {
+  font-size:17px;
+  padding-left: 25%;
+  
+  }
+.ranking h1 .fa-heart-o {
+  color: red;
+}
+.count_7{
+  counter-reset: chapter;
+}
+
+/*スライドデザイン*/
+
+.toppage3 img{
+  width: 150%;
+}
+
+.toppage3 {
+   background-color: white;
+  }
+.toppage3 h1 {
+  padding-top: 100px;
+  text-align: center;
+  }  
+.toppage3-sign {
+  position: absolute;
+    top: 80%;
+    left: 43%;
+    background-color: #008DDD;
+    opacity:0.7;
+    color: white;
+    padding: 15px 60px 15px 60px;
+    border-radius: 20px;
+    z-index: 20;
+  }
+  
+.carousel-inner  {
+  width: 100%;
+  height: 600px;
+  margin-top: 60px;
+  background-color: white;
+   padding-right: 170px;
+   padding-left: 170px;
+  }
+
+/*users/indexのデザイン*/
+
+.user-introduction {
+ 
+  margin-top: 40px;
+  }
+
+.user-introduction .panel-heading{
+  display: none;
+  }
+
+.user-introduction .panel-body {
+ height: 200px; 
+ padding-right: 30px;
+}
+
+.user-introduction .panel p{
+  margin-top: 10px;
+  }
+
+
+/*レスポンシブデザイン*/ 
+@media(max-width: 500px) {
+    
+    html,body {
+        width:100%;
+        height: 100%;
+        margin:0;
+        padding:0;
+      }
+      
+      .alert { 
+    z-index:2;
+    position:absolute;
+    top:0px;
+    left:-25%;
+    right:-25%;
+    }
+    
+    header {
+       margin-bottom:0px;
+      }  
+      
+    .cover .id {
+      position:absolute;
+      top:437px;
+      left:120px;
+    }
+   
+   .cover .cover-inner .cover-contents h1 {
+     
+      margin-top:50px;
+      font-size:34px;
+      font-weight:bold;
+      color:white;}
+      
+    
+    
+    
+    .cover .cover-inner .cover-contents h2{
+      margin-top: 280px;
+      font-weight:bold;
+      margin-left:30px;
+      font-size:34px;
+      color:white;
+      }
+      
+      h2 {
+      margin-top:70px;
+      font-size:20px;
+      text-align:center;
+      }
+      
+      .button {
+          width: 265px;
+          height: 85px;
+          line-height: 85px;
+          position:fixed;
+          top:700px;
+          left:280px;
+          background-color: #008DDD;
+          border-radius: 50%;
+          text-align:center;
+          }
+          
+    
+    .post {
+      width:100%;
+      margin-left:-5% ;
+      }
+      
+    .post .panel {
+      width:113%;
+      }
+    
+  .post .panel-heading .id {
+      
+      position:absolute;
+      top:22px;
+      right:165px;
+      }
+          
+    .post .panel-body img {
+      width:100%;
+      height:310px;
+      }
+     
+     .post .panel-body {
+        height:330px;
+        padding-top :-20px;  
+        }
+/*検索フォーム*/
+  .search {
+  list-style:none;
+  
+  }
+.search-form {
+  height:35px;
+  width:260px;
+  margin-right: 3px;
+  margin-top:10px;
+  margin-left: 10px;
+  } 
+.search .btn {
+   position: absolute;
+   top: 9px;
+    right: 30%;
+  background-color: #66CC99;
+  height:36px;
+  width:60px;
+  margin-bottom: 2px;
+  color: white;
+  padding-right: 4px;
+  }
+
+.search-user {
+  width:100%;
+  }
+
+.user-box {
+  border:ridge 1px black;
+  height:210px;
+  width:14%;
+  float:left;
+  margin-right:10px;
+  margin-top:70px;
+  margin-left:120px;
+  padding:15px;
+  }
+.user-box img {
+ margin-left:30px;
+  }
+.user-box a{
+  position:relative;
+  top:0px;
+  left:60px;
+  font-size:15px;
+  }
+  .user-box p{
+  position:relative;
+  top:5px;
+  left:50px;
+  font-size:15px;
+  }
+/*post/showのレイアウト*/
+.items {
+  padding-top: -5px;
+  width: 100%;
+}
+
+.items .panel-heading .fa{
+  position: absolute;
+    top: 3%;
+    left: 88%;
+  }
+
+.items .pv-count {
+  width: 40px;
+  }
+
+/*コメント機能*/
+  
+  .comments {
+  background-color:white;
+  margin-top:10px;
+  width: 100%;
+  }
+  
+aside .comment{
+  margin-top:20px;
+  }
+     
+ .comment-text {
+  
+  width:190px;
+  height:30px;
+  border:none;
+  border-bottom:solid 1px;
+  background:none;
+  }
+
+.comment-submit {
+  border-radius:15px;
+  width: 50%;
+  height:25px;
+  position:absolute;
+  top:10%;
+  left:90%;
+  background-color:skyblue;
+  color:white;
+  font-weight:bold;  
+  }
+  
+/*user/showのレイアウト*/
+     
+     .row3 {
+  width: 100%; 
+  
+  
+  }
+    .iteming {
+     width:32%;
+     margin-left: 3px;
+     margin-right: 2px;
+    }
+  
+  .iteming .panel {
+    margin-bottom:20px;
+  
+    }
+  .iteming .panel-heading {
+    height:30px;
+    }
+  
+  .iteming .panel-body {
+    height:100px;
+    padding:0px;
+    }
+  .iteming .panel-body img {
+    width:100%;
+    height:100%;
+    }
+    
+   .row {
+     width:100%;
+    
+     margin: 0px;
+     }
+      
+  .user-profile .icon .box {
+   position:absolute;
+   top:145px;
+   left:250px;
+   padding-bottom:0px;
+   }
+   
+   .user-profile .id {
+  position:absolute; 
+  top:40%;  
+  left:55%;
+  }
+/*post/index*/
+  .post-index {
+    width: 100%;
+    }
+  .all-post {
+    width: 33.3%;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin: 5% 0% 10% 0%;
+    float: left;
+    }
+  .all-post .panel {
+   
+    width: 123%;
+    margin-right: -10%;
+    margin-left: -10%;
+    }
+  .all-post .item-title {
+    font-size: 5px;
+    position: relative;
+      top:0px;
+      left: 15px;
+    }
+    
+  .all-post .item-titles {
+    font-size: 5px;
+   
+    position: relative;
+      top:-30px;
+      left: -32px;
+    }
+  .all-post .panel-heading {
+    height:30px;
+    }
+  
+  .all-post .panel-body {
+    height:100px;
+    padding:0px;
+    }
+  .all-post .panel-body img {
+    width:100%;
+    height:100%;
+    }
+ 
+/*投稿ボタン*/
+  .button {
+  width: 85px;
+  height: 85px;
+  line-height: 85px;
+  position:fixed;
+  top:60%;
+  left:70%;
+  background-color: #008DDD;
+  border-radius: 50%;
+  text-align:center;
+  transition: 1s;
+  -webkit-transition: 1s;
+  }
+.button:hover {
+  transform:scale(1.5);
+  }
+/*toppage2のレイアウト*/
+  .toppage2 {
+    margin-top:-130px;
+    width:100%;
+   padding:0;
+    height:650px;
+    background-color:#f2f2f2;
+    }
+    
+.toppage2 h2 {
+  padding-top:50px;
+  margin-bottom:40px;
+  }
+.toppage2 .text1{
+  text-align: center;
+  font-weight: bold; 
+  font-size: 15px;
+  margin-top: 10px;
+}
+  
+.heart-tag{
+ position:absolute;
+   top:300px;
+   left:280px;
+   right:0px;
+}
+
+.comment-tag {
+   position:absolute;
+   top:300px;
+   left:70px;
+   right:0px;
+}
+
+.image-tag {
+   position:absolute;
+   top:460px;
+   left:280px;
+   right:0px;
+   
+  }
+  
+.chat-tag {
+   position:absolute;
+   top:460px;
+   left:70px;
+   right:0px;
+}
+.comment-capital {
+  position:absolute;
+    top:370px;
+    left:30px;
+  font-weight:bold;
+  font-size: 12px;
+}
+
+.heart-capital{
+  position:absolute;
+    top:370px;
+    left:230px;
+  font-weight:bold;
+  font-size: 12px;
+  }
+
+.image-capital {
+  position:absolute;
+    top:530px;
+    left:230px;
+  font-weight:bold;
+  font-size: 12px;
+  }
+.chat-capital {
+  position:absolute;
+    top:530px;
+    left:30px;
+  font-weight:bold;
+  font-size: 12px;
+}
+/*toppage3のレイアウト*/
+
+  .toppage3 {
+   background-color: white;
+  }
+.toppage3 h1 {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  }  
+.toppage3-sign {
+  position: relative;
+    top:-130px;
+    left:110px;
+    background-color: #008DDD;
+    opacity:0.7;
+    color: white;
+    padding: 15px 30px 15px 30px;
+    border-radius: 20px;
+  }
+.toppage3 .carousel-inner{
+  padding: 0px;
+  width: 100%;
+  }
+ .toppage3 .iten .active {
+  width: 100%; 
+ }
+  .toppage3  {
+    height: 400px;
+    }
+  .carousel-inner {
+    width: 100%;
+    height: 350px;
+    }
+/*footerのレイアウト*/
+
+
+　#caption {
+   margin-top:300px;
+    background-color:white;
+    padding-bottom:30px ;
+  border: 3px solid black;
+  }
+/*入力フォーむ*/
+  .cover  .id {
+  background-color:#009933;
+  opacity:0.8;
+  color:white;
+  font-size:19px;
+  width:60%;
+  height:50px;
+  border-radius:10px;
+  position:absolute;
+  padding-top:11px;
+  top:60%;
+  left:24%;
+  font-weight:bold;
+  display: inline-block;
+  border-bottom: solid 4px #627295;
+  }
+ .cover .login {
+  background-color:#3366CC;
+  opacity:0.8;
+  color:white;
+  font-size:19px;
+  width:60%;
+  height:50px;
+  padding-top:11px;
+  border-radius:10px;
+  position:absolute;
+  top:75%;
+  left:24%;
+  font-weight:bold;
+  display: inline-block;
+  border-bottom: solid 4px #627295;
+  }
+
+ 
+  .ranking {
+    display: none;
+    position: fixed;
+      top:250px;
+      left: 30px;
+      width:90%;
+    z-index: 1;
+    }
+  .nav .ranking2{
+  display: inline-block;
+  }
+}
