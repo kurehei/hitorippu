@@ -12,12 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
  $(function() {
   $('#flash').fadeOut(2500);
-  $('#post-button').fadeIn(3000)
+  $('#post-button').fadeIn(3000);
   
   $('.ranking2').hover(function(){
     $('.ranking').fadeIn();},
@@ -25,4 +24,8 @@
     
      }
    );
+ $("#smooth-scroll").click(function() {
+  $("html,body").animate({scrollTop:0}, "300");
+  });
+ 
 });
