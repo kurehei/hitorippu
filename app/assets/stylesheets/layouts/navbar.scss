@@ -1,0 +1,10 @@
+.navbar-nav li> a:before{/*ナビゲーションメニュー共通の設定*/
+	display: block;
+	font-family: FontAwesome;
+	font-size:1.5em;
+}
+
+.active3> a:before{/*各項目ごとのアイコン設定*/
+	content: '\f015';
+	color: #fff;
+}

@@ -63,7 +63,9 @@ gem 'cloudinary'
 gem 'gravtastic'
 gem 'impressionist'
 
+gem 'bootstrap', '~> 4.1.3'
+
 group :production do
-  gem 'pg', '0.21.0'
+  gem 'pg', '~> 0.19.0'
 end
- 
+gem 'bootsnap', require: false

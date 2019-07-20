@@ -1,28 +1,24 @@
-<div class='post-index'>
+<div class="row">
   <% @posts.each do |posted| %>
-        <div class="all-post">
           <div class="col-md-4">
-            <div class="panel panel-default">
-              <div class="panel-heading text-center">
-                <p class="item-title"><%= link_to posted.name,posted %></p>
-                <p class='item-titles'>
+            <div class="card">
+              <div class="card-header text-center">
+                <%= link_to posted.name,posted %>
                   <% if posted.user.image? %>
                     <%= image_tag posted.user.image.thumb.url  ,class:"img-circle",:size =>'20x20'%>
                   <% else %>
                      <%= image_tag avatar_url(posted.user) ,class:"img-circle",:size =>'20x20'%>
                   <% end %>
                   <%=link_to posted.user.name, user_path(posted.user)%>
-                  </p>
               </div>
-              <div class="panel-body">
+              <div class="card-body">
                 <% if posted.image? %>
-                　<%= image_tag posted.image.thumb.url %>
+                　<%= image_tag posted.image.thumb.url,class: "image" %>
                 　<% else %>
-                　<%= image_tag 'noimage.gif' %>
+                　<%= image_tag 'noimage.gif' ,class: "image"%>
               　<% end %>
               </div>
             </div>
           </div>
-        </div>
       <% end %>
 </div>

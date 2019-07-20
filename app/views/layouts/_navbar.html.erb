@@ -1,76 +1,54 @@
 <header>
-         <% if logged_in? %>
-         
-<nav class="navbar navbar-default navbar-static-top">
+         <% if logged_in? %>x
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-expanded="false" aria-controls="Navber">
+           <span class="navbar-toggler-icon"></span>
         </button>
          <a class="navbar-brand" href="/">hitrippu</a>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
+      <div class="collapse navbar-collapse" id="Navber">
+        <ul class="navbar-nav ml-md-auto align-items-center">
+          <li class="nav-item active1">
               <div class='search'>
                 <%= form_tag(posts_path, :method => 'get')do%>
-                  <%= text_field_tag :search, '', class: 'search-form',placeholder: "気になるタイトルを検索してみよう！"%>
-                  <%= button_tag(class:  "btn")do%>
-                    <%= content_tag :span , '検索', class: 'fa fa-search'%>
+                  <%= text_field_tag :search, '', class: 'search-form',placeholder: "タイトル！"%>
+                  <%= button_tag(class:"search-btn")do%>
+                    <%= content_tag :span , '', class: 'fa fa-search'%>
                   <% end %>
                 <% end %>
               </div>
           </li>
-          <li><a class="ranking2">ランキング</a></li>
-           <li><%= link_to '', users_path ,class: "fa fa-1.5x fa-users"%></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item active2"><a class="ranking2">ランキング</a></li>
+           <li class="nav-item active3"><%= link_to 'ユーザー', users_path ,class: "nav-link"%></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span class='gravatar'>
                <% if current_user.image? %>
-                  <%= image_tag current_user.image.thumb.url  ,class:"img-circle",:size =>'30x30'%>
+                  <%= image_tag current_user.image.thumb.url  ,class:"rounded",:size =>'30x30'%>
                 <% else %>
-                  <%= image_tag avatar_url(current_user) ,class:"img-circle",:size =>'30x30'%>
+                  <%= image_tag avatar_url(current_user) ,class:"rounded",:size =>'30x30'%>
                 <% end %>
               </span>
             <%= current_user.name %> 
               <span class="caret"></span></a>
               
-            <ul class="dropdown-menu">
-              <li><%= link_to 'マイプロフィール', user_path(current_user) %></li>
-                <li role="separator" class="divider"></li>
-              <li><%= link_to '投稿する', new_post_path%></li>
-               <li role="separator" class="divider"></li>
-              <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to 'マイプロフィール', user_path(current_user) ,class: "dropdown-item"%>
+                <div class="dropdown-divider"></div>
+              <%= link_to '投稿する', new_post_path,class: "dropdown-item"%>
+               <div class="dropdown-divider"></div>
+              <%= link_to 'ログアウト', logout_path, method: :delete ,class: "dropdown-item"%>
              
-            </ul>
+            </div>
           </li>
         </ul>
       </div>
     </div>
   </nav>
           <% else %>
-          <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">hitrippu</a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to '新規登録', signup_path%></li>
-          <li><%= link_to 'ログイン', login_path %></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+          <%= render 'layouts/navbar2'%>
           <% end %>
         </ul>
       </div>

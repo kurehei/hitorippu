@@ -1,0 +1,70 @@
+ .toppage2 {
+    width:100%;
+   padding:0;
+    height:650px;
+    background-color:#f2f2f2;
+    }
+    
+.toppage2 h2 {
+  padding-top:30px;
+  margin-bottom:40px;
+  }
+.toppage2 .text1{
+  text-align: center;
+  font-weight: bold; 
+  font-size: 20px;
+  margin-top: 10px;
+}
+  
+.heart-tag{
+ position: absolute;
+   top:150%;
+    left: 60%;
+}
+
+.comment-tag {
+   position: absolute;
+   top:150%;
+   left: 29%;
+   right:0px;
+}
+
+.image-tag {
+   position:absolute;
+   top:168%;
+   left: 29%;
+   right:0px;
+  }
+  
+.chat-tag {
+   position:absolute;
+   top:168%;
+    left: 60%;
+   right:0px;
+}
+.comment-capital {
+  position:absolute;
+    top:160%;
+   left: 29%;
+  font-weight:bold;
+}
+
+.heart-capital{
+  position:absolute;
+    top:160%;
+    left: 60%;
+  font-weight:bold;
+  }
+
+.image-capital {
+  position:absolute;
+    top:178%;
+   left: 29%;
+  font-weight:bold;
+  }
+.chat-capital {
+  position:absolute;
+    top:178%;
+    left: 60%;
+  font-weight:bold;
+}

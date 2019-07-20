@@ -2,6 +2,8 @@
   <div class="col-md-offset-1 col-md-4 col-sm-offset-3 col-sm-2">
     <div class='ranking'>
         <h1 class="fa fa fa-heart-o">いいねランキング</h1>
+        <img src="/iamges/ranking.jpg">
+        <img src="/images/シンプルな王冠素材.png">
          <table class='table'>
            <thead>
               <tr>
@@ -13,6 +15,7 @@
            <% rank.each.with_index(1) do |rank, i| %>
            <tbody>
              <tr>
+               <!--- 第一位--->
                <th class='text-center'><%= "第#{i}位" %></th>
                <th class='text-center'><%= rank.name%></th>
                <th class='text-center'>
@@ -22,6 +25,7 @@
                      <%= image_tag avatar_url(rank.user) ,class:"img-circle",:size =>'30x30'%>
                   <% end %>
                  <%= link_to rank.user.name, user_path(rank.user)%></th>
+                 <!--- 第２位--->
                </tr>
            </tbody>
            <% end %>

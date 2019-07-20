@@ -1,0 +1,35 @@
+#caption {
+   padding-top:30px;
+   background-color:white;
+    padding-bottom:30px ;
+  }
+
+footer {
+  background-color:white;
+  }
+
+#smooth-scroll {
+ width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  opacity: 0.6;
+}
+
+#smooth-scroll a {
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+  
+#smooth-scroll a::before {
+  font-family: FontAwesome;
+  content: '\f139';
+  font-size: 60px;
+  color: #3fefee;
+}
+.alert {
+   margin:80px 120px 0px 120px;
+   text-align:center;
+}

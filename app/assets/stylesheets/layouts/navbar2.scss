@@ -1,0 +1,22 @@
+
+
+
+
+.navbar-nav {
+  padding:10px;
+  }
+
+.navbar-nav li> a:before{/*ナビゲーションメニュー共通の設定*/
+	font-family: FontAwesome;
+	font-size:2.0em;
+	padding-left: 12px;
+	margin-bottom: -8px;
+}
+
+.login> a:before{/*各項目ごとのアイコン設定*/
+	content: '\f090';
+	color: #fff;	
+}
+.nav-link {
+ font-size: 13px; 
+}

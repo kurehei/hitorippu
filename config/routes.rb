@@ -1,44 +1,5 @@
 Rails.application.routes.draw do
-  get 'posts/index'
-
-  get 'posts/show'
-
-  get 'users/edit'
-
-  get 'comments/create'
-
-  get 'comments/destroy'
-
-  get 'likes/create'
-
-  get 'likes/destroy'
-
-  get 'relationships/create'
-
-  get 'relationships/destroy'
-
-  get 'posts/new'
-
-  get 'posts/create'
-
-  get 'posts/destroy'
-
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
-  get 'users/index'
-
-  get 'users/show'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'toppages/index'
-
+ 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'toppages#index'
   get 'signup', to: 'users#new'
@@ -57,6 +18,7 @@ Rails.application.routes.draw do
   
   resources :posts, only: [:index,:new, :create, :destroy, :show] do
     resources :comments, only: [:create, :destroy]
+    resources :likes, only: %i(create destroy), shallow: true
   end
   resources :relationships, only: [:create, :destroy]
   

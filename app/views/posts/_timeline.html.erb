@@ -1,35 +1,29 @@
-<div class='timeline'>
+
+
+<!--- 投稿有無の条件分岐---> 
   <% if posts.empty?%>
-   
   <% else %>
     <% posts.each do |postings| %>
-        <div class="post">
-          <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2">
-            <div class="panel panel-default">
-              <div class="panel-heading text-center">
-                <p class="timeline-itemt-title"><%= link_to postings.name ,postings%></p>
-                <p class='item-title3'>
+          <div class="col-md-5 offset-md-1 col-sm-4 offset-sm-2">
+            <div class="card">
+              <div class="card-header align-items-center d-flex">
+                <div class="user">
                 　　<% if postings.user.image? %>
                       <%= image_tag postings.user.image.thumb.url  ,class:"img-circle",:size =>'30x30'%>
                     <% else %>
                        <%= image_tag avatar_url(postings.user) ,class:"img-circle",:size =>'30x30'%>
                     <% end %>
-                     <%= link_to  postings.user.name,user_path( postings)%>
-                </p>
-              
-                
+                    <%= link_to  postings.user.name,user_path( postings),class: "user-name"%>
+                    <%= link_to postings.name ,postings,class: "title mx-auto"%>
+                </div>
               </div>
-              <div class="panel-body">
+              <div class="card-body" style="height: 480px;">
                       <%=link_to postings do%>
-                      　<%= image_tag postings.image.thumb.url ,:size =>'570x335'%>
+                      　<%= image_tag postings.image.thumb.url ,class: "image", :size =>'30%x30%'%>
                       <% end%>
-  
-                
               </div>
             </div>
           </div>
-        </div>
       <% end %>
     </div>
   <% end %>
-</div>

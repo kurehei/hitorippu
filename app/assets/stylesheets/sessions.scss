@@ -1,3 +1,64 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.login {
+  height:100%;
+  }
+.login .card-heading {
+  background-color:white;
+  }
+.login .cardl-body {
+  height:500px;
+  }  
+
+.login .cardl-body p{
+  padding-top:30px;
+  font-weight:bold;
+  font-size:15px;
+  }
+.login .card-body hr {
+  padding-bottom:45px;
+  }
+
+.new-button{
+ text-align:center;
+ margin-bottom:30px;
+ margin-top:0px;
+  }
+  
+.new-btn {
+   width:180px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  }
+  
+  .new-btn:active {
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
+.login-btn {
+  position: relative;
+    top:10px;
+  height:50px;
+  width:180px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 7px;
+    
+  }
+  .login-btn:active {
+     
+     -webkit-transform: translateY(4px);
+      transform: translateY(4px);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }

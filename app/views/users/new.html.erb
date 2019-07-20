@@ -1,10 +1,10 @@
 <div class='user-new'>
-  <div class='col-xs-12 col-md-4 col-md-offset-4'>
-    <div class="panel panel-default ">
-      <div class="panel-heading text-center">
+  <div class='col-xs-12 col-md-4 offset-md-4'>
+    <div class="card">
+      <div class="card-header text-center">
       新規登録
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         
         <%= form_for(@user) do |f|%>
         
@@ -36,7 +36,7 @@
         
         <div class="form-group" >
           <%= f.label :introduction, '一言' %>
-          <%= f.text_area :introduction,  class: 'form-control',placeholder: "あなたについて一言",rows: 3 %>
+          <%= f.text_area :introduction,  class: 'form-control',placeholder: "あなたについて一言" %>
         </div>
         <div class="text-center">
           <%= f.submit '登録する',class: 'btn btn-primary btn-lg' %>

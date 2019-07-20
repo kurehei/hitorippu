@@ -1,11 +1,11 @@
 <div class="user-profile">
     <div class="icon text-center">
     	<% if @user.image? %>
-                  <%= image_tag @user.image.thumb.url  ,class:"img-circle",:size =>'150x140'%>
+                  <%= image_tag @user.image.thumb.url  ,class: "rounded-circle",:size =>'150x140'%>
         <% else %>
-                   <%= image_tag avatar_url(@user) ,class:"img-circle",:size =>'150x140'%>
+                   <%= image_tag avatar_url(@user) ,class: "rounded-circle",:size =>'150x140'%>
         <% end %>
-      <a class='box'><%= render 'relationships/follow_button',user: @user%></a>
+     <a class='box'><%= render 'relationships/follow_button',user: @user%></a>
     </div>
     <% if current_user == @user %>
       <div class='id'><%= link_to 'プロフィール編集', edit_user_path(current_user),class: 'btn btn-default' %></div>

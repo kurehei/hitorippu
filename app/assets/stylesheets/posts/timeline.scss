@@ -1,0 +1,40 @@
+ .button {
+  width: 85px;
+  height: 85px;
+  line-height: 85px;
+  position:fixed;
+  top:80%;
+  left:80%;
+  background-color: #008DDD;
+  border-radius: 50%;
+  text-align:center;
+  transition: 1s;
+  -webkit-transition: 1s;
+  }
+.button:hover {
+  transform:scale(1.5);
+  }
+
+.button span {
+  color:#FFFFFF;
+  }
+  
+  .card {
+  width: 98%;
+  }
+
+.card-header {
+  background-color: white;
+  }
+.card-body {
+
+}
+
+.user {
+  padding-right: 30px;
+  padding-left: 0px;
+  }
+image {
+  width: 107.5%;
+  margin-bottom: -4.5%;
+}

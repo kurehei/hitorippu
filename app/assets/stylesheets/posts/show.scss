@@ -1,0 +1,84 @@
+  
+aside {
+   background-color:white;
+  }
+  
+  
+.card .card1{
+  margin-right: 0%;
+  }
+.card1 .card-heading {
+  background-color: white;
+  margin-bottom:-20px;
+  }
+
+.card1 .card-heading .fa {
+   position:absolute;
+   top:20px; 
+   left:550px;
+}
+.card1 .card-body {
+  height: 360px;
+  padding: 0;
+}
+.card1 .card-body img{
+  width: 100%;
+}
+
+.card1 .card-footer {
+  background-color:white;
+  height: 300px;
+  }
+
+.row .pv-count {
+  position:relative;
+    top: -17%;
+    left: 12%;
+    color:white;
+    background-color: skyblue;
+    font-weight: bold;
+    padding: 0.5%;
+    width: 10%;
+  }
+
+.items .item-user-name {
+  position: absolute;
+    top: 3%;
+    color: black;
+  }
+  
+
+  
+.like-btn {
+  color: #8899a6;
+  margin-right:-20px;
+  margin-bottom:10px;
+}
+.fa-heart {
+  color: red;
+  }
+
+
+
+.like-btn-unlike {
+  color: #ff2581;
+  margin-right:-20px;
+  margin-bottom:10px;
+}
+
+h2 {
+  margin-top:70px;
+  font-size:40px;
+  text-align:center;
+  }
+
+.media-list {
+  margin-top:10px;
+  }
+
+.media-body .comment {
+  position:absolute;
+   top:5px;
+   left:15%;
+  
+  }
