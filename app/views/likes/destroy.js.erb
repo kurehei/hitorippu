@@ -1,4 +1,4 @@
 $('#like-icon-post-<%= @post.id.to_s %>').
-  html('<%= link_to "", post_likes_path(@post), method: :POST, remote: true, class: "fa fa-2x fa-heart-o" %>');
-  $('#like-icon-post-<%= @post.id.to_s %>').html
-('<%=@likes_count.to_s%>');
+  html('<%= link_to "", post_likes_path(@post), method: :POST, remote: true, class: "fa fa-2x fa-heart" %>');
+$('#like-count-<%= @post.id.to_s %>').html
+('<%=@likes_count %>');

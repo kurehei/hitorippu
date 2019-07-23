@@ -2,6 +2,7 @@ class LikesController < ApplicationController
   def create
     @like = current_user.likes.build(like_params)
     @post = @like.post
+    @likes_count = Like.where(post_id: @post.id).count  # ← 追加
     if @like.save
       respond_to :js
     end
@@ -11,6 +12,7 @@ class LikesController < ApplicationController
   def destroy
     @like = Like.find(params[:id])
     @post = @like.post
+    @likes_count = Like.where(post_id: @post.id).count  # ← 追加
     if @like.destroy
       respond_to :js
     end

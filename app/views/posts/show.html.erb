@@ -30,11 +30,13 @@
               <div id="like-icon-post-<%= @post.id.to_s %>">
               <% if @post.liked_by(current_user).present? %>
                 <%= link_to "", like_path(@post.liked_by(current_user)), method: :DELETE, remote: true, class: "fa fa-2x fa-heart" %>
-                 <%=@likes_count %>
               <% else %>
                 <%= link_to "", post_likes_path(@post), method: :POST, remote: true, class: "fa fa-2x fa-heart-o" %>
-                 <%=@likes_count %>
               <% end %>
+            </div>
+            <!---良いねカウント数--->
+            <div id="like-count-<%= @post.id.to_s %>">
+              <%= @likes_count %>
             </div>
          　<p class="pv-count">PV<%=  @post.impressionist_count %></p>
            <p><%= @post.content%></p>
