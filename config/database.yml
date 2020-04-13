@@ -15,8 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /var/lib/mysql/mysql.sock
-
+  
 development:
   <<: *default
   database: hitoripu2_development
@@ -54,5 +53,3 @@ production:
   database: hitoripu2_production
   username: hitoripu2
   password: <%= ENV['HITORIPU2_DATABASE_PASSWORD'] %>
-  
-  

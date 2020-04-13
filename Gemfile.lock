@@ -227,7 +227,7 @@ DEPENDENCIES
   pg (~> 0.19.0)
   puma (~> 3.0)
   rails (~> 5.0.6)
-  rmagick
+  rmagick (~> 2.16.0)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -237,7 +237,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.4.1p111
+   ruby 2.5.1p57
 
 BUNDLED WITH
    2.0.1
