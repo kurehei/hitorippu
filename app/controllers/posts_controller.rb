@@ -4,11 +4,11 @@ class PostsController < ApplicationController
   impressionist :actions => [:show]
   
   def index
-    @posts=Post.search(params[:search])
+    @posts=Post.search(params[:name])
   end
   
   def new
-    @post=current_user.posts.build
+    @post= Post.new
   end
   
  def show
@@ -20,15 +20,15 @@ class PostsController < ApplicationController
  end
  
  def create
-    @post=current_user.posts.build(post_params)
+   @post=current_user.posts.build(post_params)
     
-    if @post.save
-      flash[:success]= '記録しました'
-      redirect_to root_url
-    else
-      flash.now[:danger] = '記録できませんでした'
-      render :new
-    end
+   if @post.save
+     flash[:success]= '記録しました'
+     redirect_to root_url
+   else
+     flash.now[:danger] = '記録できませんでした'
+     render :new
+   end
   end
    
    def destroy
