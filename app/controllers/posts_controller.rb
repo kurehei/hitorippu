@@ -17,7 +17,6 @@ class PostsController < ApplicationController
   @comments = @post.comments
   @comment =Comment.new
   impressionist(@post, nil, unique: [:session_hash])
-  @user=User.find(params[:id])
  end
  
  def create
