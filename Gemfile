@@ -58,8 +58,6 @@ gem 'carrierwave', '~> 1.3.1'
 
 gem 'rmagick', '~> 2.16.0'
 
-gem 'cloudinary' , '1.11.1'
-
 gem 'gravtastic'
 
 gem 'bootstrap', '~> 4.1.3'
