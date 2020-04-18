@@ -10,9 +10,7 @@ class Post < ApplicationRecord
   validates :image, presence: true
 
   mount_uploader :image, ImageUploader
-  
-  is_impressionable
-  
+    
   def liked_by(user)
     Like.find_by(user_id: user.id, post_id: id)
   end

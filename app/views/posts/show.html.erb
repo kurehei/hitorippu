@@ -11,7 +11,7 @@
                    <%= link_to @post.user.name,user_path(@post.user)%>
               </p>
                <p class="itemt-title"><%= @post.name%></p>
-              <p class="trash-icon text-right">
+              <%= link_to '削除',post_path(@post), method: :delete %>
               <% if @post.user == current_user%>
                  <a href="#" class="fa fa-trash fa-2x text-right"></a>
               <% end %>
@@ -38,7 +38,6 @@
             <div id="like-count-<%= @post.id.to_s %>">
               <%= @likes_count %>
             </div>
-         　<p class="pv-count">PV<%=  @post.impressionist_count %></p>
            <p><%= @post.content%></p>
             </div>
           </div>

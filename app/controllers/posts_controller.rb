@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:destroy]
-  impressionist :actions => [:show]
   
   def index
     @posts=Post.search(params[:name])
@@ -16,7 +15,6 @@ class PostsController < ApplicationController
   @likes_count = Like.where(post_id: @post.id).count
   @comments = @post.comments
   @comment =Comment.new
-  impressionist(@post, nil, unique: [:session_hash])
  end
  
  def create
@@ -32,10 +30,9 @@ class PostsController < ApplicationController
   end
    
    def destroy
-    
-     @posting.destroy
+     @post.destroy
      flash[:danger]='削除しました。'
-     redirect_back(fallback_location: root_path)
+     redirect_to root_url
    end
    
   
@@ -43,7 +40,7 @@ class PostsController < ApplicationController
    private
   
   def correct_user
-    @posting = current_user.posts.find_by(id: params[:id])
+    @post = current_user.posts.find_by(id: params[:id])
     unless @post
       redirect_to root_url
     end
