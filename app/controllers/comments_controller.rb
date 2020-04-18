@@ -5,13 +5,12 @@ class CommentsController < ApplicationController
   
   def create
     @comment = current_user.comments.build(comment_params)
-    post = Post.find_by(id: params[:post_id])
+    @post = @comment.post
     if @comment.save
-      redirect_to post_path(post)
+      respond_to :js
     else
-      redirect_back(fallback_location: root_path)
+      flash[:alert] = "コメントに失敗しました"
     end
-    
   end
 
   def destroy

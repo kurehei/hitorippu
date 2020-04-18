@@ -10,13 +10,10 @@
                     <% end %>
                    <%= link_to @post.user.name,user_path(@post.user)%>
               </p>
-               <p class="itemt-title"><%= @post.name%></p>
-              <%= link_to '削除',post_path(@post), method: :delete %>
               <% if @post.user == current_user%>
-                 <a href="#" class="fa fa-trash fa-2x text-right"></a>
+                <%= link_to '' ,post_path(@post), method: :delete, class: "fa fa-trash fa-2x"%>
               <% end %>
-              </p>
-              
+              <p class="item-titles"><%= @post.name%></p>
             </div>
             <div class="card-body card1">
                <% if @post.image? %>
@@ -26,16 +23,18 @@
             　<% end %>
               
             </div>
-            <div class="card-footer card1">
-              <div id="like-icon-post-<%= @post.id.to_s %>">
-              <% if @post.liked_by(current_user).present? %>
-                <%= link_to "", like_path(@post.liked_by(current_user)), method: :DELETE, remote: true, class: "fa fa-2x fa-heart" %>
-              <% else %>
-                <%= link_to "", post_likes_path(@post), method: :POST, remote: true, class: "fa fa-2x fa-heart-o" %>
-              <% end %>
+            <div class="card-footer">
+              <div class="row parts">
+                <div id="like-icon-post-<%= @post.id.to_s %>">
+                <% if @post.liked_by(current_user).present? %>
+                  <%= link_to "", like_path(@post.liked_by(current_user)), method: :DELETE, remote: true, class: "fa fa-2x fa-heart" %>
+                <% else %>
+                  <%= link_to "", post_likes_path(@post), method: :POST, remote: true, class: "fa fa-2x fa-heart-o" %>
+                <% end %>
+              </div>
             </div>
             <!---良いねカウント数--->
-            <div id="like-count-<%= @post.id.to_s %>">
+            <div id="like-count-<%= @post.id.to_s %>" class="like-count">
               <%= @likes_count %>
             </div>
            <p><%= @post.content%></p>
@@ -57,8 +56,8 @@
                  <div>
                  <%= link_to current_user.name,user_path(current_user)%>
                  </div>
-                 <div class='comment'>
-                          <%= form_for [@post, @comment] do |f| %>
+                 <div id="comment-form-<%= @post.id.to_s %>%" class='comment'>
+                    <%= form_for [@post, @comment], remote: true do |f| %>
                           <%= f.text_field :content ,class: 'comment-text'%>
                           <%= f.hidden_field :user_id, :value => current_user.id %>
                           <%= f.hidden_field :post_id, :value => @post.id %>
@@ -70,43 +69,9 @@
               </div>
           </li>
       </ul>
-        
-      <ul class="media-list">
-       <% @comments.each do |c| %> 
-        <li class='media'>
-              
-            <div class='media-left'>
-               　<% if  c.user.image? %>
-                      <%= image_tag  c.user.image.thumb.url  ,class:"img-circle",:size =>'50x50'%>
-                    <% else %>
-                       <%= image_tag avatar_url( c.user) ,class:"img-circle",:size =>'50x50'%>
-                    <% end %>
-                <!--コメント-->
-            </div>
-               <div class='media-body'>
-                 <div>
-                   <%= link_to c.user.name,user_path(c.user)%>
-                 </div> 
-                 <div> 
-                 
-                  <div class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <span class='gravatar'>
-                                &#8230;
-                      </span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">編集</a></li>
-                        <li role="separator" class="divider"></li>
-                      <li><a href="#">削除</a></li>
-                    </ul>
-                    </div>
-                  <%= c.content %> 
-                 </div>
-                  <hr>
-               </div>
-        </li>
-        <% end %>
-      </ul> 
+      <div id="comment-post-<%= @post.id.to_s %>">
+        <%= render 'comment_list', post: @post %>
+      </div>
     </div>
 </div>
 
