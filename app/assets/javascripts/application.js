@@ -17,18 +17,19 @@
 //= require jquery_ujs
 //= require_tree .
 
- $(function() {
+$(function () {
   $('#flash').fadeOut(2500);
   $('#post-button').fadeIn(3000);
-  
-  $('.ranking2').hover(function(){
-    $('.ranking').fadeIn();},
-    function(){
-    
-     }
-   );
- $("#smooth-scroll").click(function() {
-  $("html,body").animate({scrollTop:0}, "300");
+
+  $('.ranking2').hover(function () {
+    $('.ranking').fadeIn();
+  },
+    function () {
+
+    }
+  );
+  $("#smooth-scroll").click(function () {
+    $("html,body").animate({ scrollTop: 0 }, "300");
   });
- 
+
 });
