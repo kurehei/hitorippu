@@ -1250,7 +1250,6 @@ aside .comment{
       top:250px;
       left: 30px;
       width:90%;
-    z-index: 1;
     }
   .nav .ranking2{
   display: inline-block;
