@@ -1,0 +1,36 @@
+<ul class="media-list">
+       <% post.comments.each do |c| %> 
+        <li class='media'>
+              
+            <div class='media-left'>
+               　<% if  c.user.image? %>
+                      <%= image_tag  c.user.image.thumb.url  ,class:"img-circle",:size =>'50x50'%>
+                    <% else %>
+                       <%= image_tag avatar_url( c.user) ,class:"img-circle",:size =>'50x50'%>
+                    <% end %>
+                <!--コメント-->
+            </div>
+               <div class='media-body'>
+                 <div>
+                   <%= link_to c.user.name,user_path(c.user)%>
+                 </div> 
+                 <div> 
+                 
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class='gravatar'>
+                                &#8230;
+                      </span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">編集</a></li>
+                        <li role="separator" class="divider"></li>
+                      <li><a href="#">削除</a></li>
+                    </ul>
+                    </div>
+                  <%= c.content %> 
+                 </div>
+                  <hr>
+               </div>
+        </li>
+        <% end %>
+      </ul> 
