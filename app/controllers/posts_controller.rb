@@ -19,7 +19,6 @@ class PostsController < ApplicationController
  
  def create
    @post=current_user.posts.build(post_params)
-    
    if @post.save
      flash[:success]= '記録しました'
      redirect_to root_url
@@ -29,13 +28,11 @@ class PostsController < ApplicationController
    end
   end
    
-   def destroy
-     @post.destroy
-     flash[:danger]='削除しました。'
-     redirect_to root_url
-   end
-   
-  
+  def destroy
+    @post.destroy
+    flash[:danger]='削除しました。'
+    redirect_to root_url
+  end
    
    private
   

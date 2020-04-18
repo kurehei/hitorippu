@@ -8,11 +8,9 @@ class LikesController < ApplicationController
     if @like.save
       respond_to :js
     end
-    
   end
 
   def destroy
-    @like = Like.find(params[:id])
     @post = @like.post
     @likes_count = Like.where(post_id: @post.id).count  # ← 追加
     if @like.destroy
