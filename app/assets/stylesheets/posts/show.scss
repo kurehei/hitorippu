@@ -47,25 +47,34 @@ aside {
     color: black;
   }
   
+.fa-trash {
+  color: black;
+  text-align: left;
+  position: relative;
+  left: 350px;
+}
 
-  
-.like-btn {
-  color: #8899a6;
-  margin-right:-20px;
-  margin-bottom:10px;
+.item-titles {
+  position: relative;
+  top: 5px;
+  font-size: 18px;
+  left: 120px;
 }
 .fa-heart {
   color: red;
+  margin-top: 36px;
   }
 
-
-
-.like-btn-unlike {
+.fa-heart-o {
   color: #ff2581;
-  margin-right:-20px;
-  margin-bottom:10px;
+  margin-top: 36px;
 }
 
+.like-count {
+  position: relative;
+  bottom: 23px;
+  left: 27px;
+}
 h2 {
   margin-top:70px;
   font-size:40px;
@@ -80,5 +89,4 @@ h2 {
   position:absolute;
    top:5px;
    left:15%;
-  
   }

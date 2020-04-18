@@ -8,7 +8,7 @@
      <a class='box'><%= render 'relationships/follow_button',user: @user%></a>
     </div>
     <% if current_user == @user %>
-      <div class='id'><%= link_to 'プロフィール編集', edit_user_path(current_user),class: 'btn btn-default' %></div>
+      <div class='id'><%= link_to 'プロフィール編集', edit_user_path(current_user),class: 'edit-profile-btn btn btn-primary' %></div>
     <% end %>
     <div class="name text-center">
       <h1><%= @user.name%></h1>

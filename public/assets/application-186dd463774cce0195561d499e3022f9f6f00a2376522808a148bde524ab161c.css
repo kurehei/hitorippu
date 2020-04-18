@@ -11586,10 +11586,6 @@ header {
 /*タイムラインのレイアウト*/
 /*post/show*/
 /* line 171, /home/ec2-user/environment/hitoripu2/app/assets/stylesheets/application.scss */
-.items .fa-trash {
-  color: black;
-}
-
 /* line 175, /home/ec2-user/environment/hitoripu2/app/assets/stylesheets/application.scss */
 aside {
   background-color: white;
