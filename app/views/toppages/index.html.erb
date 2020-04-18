@@ -3,14 +3,13 @@
       <% if logged_in? %>
         <div class='row'>
           <%= render 'posts/timeline', posts: @posts%>
-            <%= render 'posts/ranks', rank: @rank,post: @postings%></div>
-              
-               <div class="button" id='post-button'>
-                  <%= link_to new_post_path do%>
-                      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                          <span class='color'>投稿する</span>
-                <% end %>
-             </div>
+          <%= render 'posts/ranks', rank: @rank,post: @postings%></div>
+              <div class="button" id='post-button'>
+                <%= link_to new_post_path do%>
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        <span class='color'>投稿する</span>
+              <% end %>
+            </div>
         </div>
       <% else %>
           <div class="row4">
