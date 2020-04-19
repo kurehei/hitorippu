@@ -728,9 +728,7 @@ aside .media1 {
   padding-left: 25%;
   
   }
-.ranking h1 .fa-heart-o {
-  color: red;
-}
+
 .count_7{
   counter-reset: chapter;
 }

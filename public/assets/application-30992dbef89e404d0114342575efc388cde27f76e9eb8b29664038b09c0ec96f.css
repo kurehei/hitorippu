@@ -284,13 +284,7 @@ aside {
   margin-top: 36px;
 }
 
-/* line 68, /Users/kureko/hitorippu/app/assets/stylesheets/posts/show.scss */
-.fa-heart-o {
-  color: #ff2581;
-  margin-top: 36px;
-}
-
-/* line 73, /Users/kureko/hitorippu/app/assets/stylesheets/posts/show.scss */
+* line 73, /Users/kureko/hitorippu/app/assets/stylesheets/posts/show.scss */
 .like-count {
   position: relative;
   bottom: 23px;
@@ -11579,10 +11573,6 @@ aside {
 }
 
 /* line 68, /Users/kureko/hitorippu/app/assets/stylesheets/posts/show.scss */
-.fa-heart-o {
-  color: #ff2581;
-  margin-top: 36px;
-}
 
 /* line 73, /Users/kureko/hitorippu/app/assets/stylesheets/posts/show.scss */
 .like-count {
