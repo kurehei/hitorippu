@@ -60,7 +60,7 @@ gem 'rmagick', '~> 2.16.0'
 
 gem 'gravtastic'
 
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 
 group :production do
   gem 'pg', '~> 0.19.0'
