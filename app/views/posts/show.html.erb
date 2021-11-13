@@ -21,7 +21,7 @@
               　<% else %>
               　<%= image_tag 'noimage.gif' %>
             　<% end %>
-              
+
             </div>
             <div class="card-footer">
               <div class="row parts">
@@ -40,17 +40,17 @@
            <p><%= @post.content%></p>
             </div>
           </div>
-         </div> 
- 
-    <div class='col-xs-12 col-md-offset-1 col-md-5 col-sm-5 col-sm-offset-1'> 
+         </div>
+
+    <div class='col-xs-12 col-md-offset-1 col-md-5 col-sm-5 col-sm-offset-1'>
       <ul class="media-list">
           <li class="media">
               <div class="media-left">
-                  　<% if  current_user.image? %>
-                      <%= image_tag  current_user.image.thumb.url  ,class:"img-circle",:size =>'50x50'%>
-                    <% else %>
-                       <%= image_tag avatar_url( current_user) ,class:"img-circle",:size =>'50x50'%>
-                    <% end %>
+                  <%# 　<% if  current_user.image? %>
+                      <%# <%= image_tag  current_user.image.thumb.url  ,class:"img-circle",:size =>'50x50'%>
+                    <%# <% else %>
+                       <%# <%= image_tag avatar_url( current_user) ,class:"img-circle",:size =>'50x50'%>
+                  <%# <% end %>
               </div>
               <div class='media-body'>
                  <div>
@@ -74,4 +74,3 @@
       </div>
     </div>
 </div>
-
